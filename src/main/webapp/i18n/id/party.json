@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "party" : {
+            "home": {
+                "title": "Parties",
+                "createLabel": "Buat Party",
+                "createOrEditLabel": "Rubah/Isi Party",
+                "search": "Cari data Party"
+            },
+            "created": "Party yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Party dengan identifier {{ param }} di rubah",
+            "deleted": "Party dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Party {{ id }}?"
+            },
+            "detail": {
+                "title": "Party"
+            },
+            "name": "Name",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "building" : {
+            "home": {
+                "title": "Buildings",
+                "createLabel": "Create a new Building",
+                "createOrEditLabel": "Create or edit a Building",
+                "search": "Search for Building"
+            },
+            "created": "A new Building is created with identifier {{ param }}",
+            "updated": "A Building is updated with identifier {{ param }}",
+            "deleted": "A Building is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Building {{ id }}?"
+            },
+            "detail": {
+                "title": "Building"
+            },
+            "facilityCode": "Facility Code",
+            "description": "Description",
+            "zone": "Zone",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

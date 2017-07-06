@@ -1,0 +1,58 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h6 class="modal-title" id="myContactMechanismPurposeLabel" jhiTranslate="kampusApp.contactMechanismPurpose.home.createOrEditLabel">Create or edit a Contact Mechanism Purpose</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!contactMechanismPurpose.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="contactMechanismPurpose.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.contactMechanismPurpose.dateFrom" for="field_dateFrom">Date From</label>
+            <div class="d-flex">
+                <input id="field_dateFrom" type="datetime-local" class="form-control" name="dateFrom" [(ngModel)]="contactMechanismPurpose.dateFrom"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.contactMechanismPurpose.dateThru" for="field_dateThru">Date Thru</label>
+            <div class="d-flex">
+                <input id="field_dateThru" type="datetime-local" class="form-control" name="dateThru" [(ngModel)]="contactMechanismPurpose.dateThru"
+                  />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.contactMechanismPurpose.purpose" for="field_purpose">Purpose</label>
+            <select class="form-control" id="field_purpose" name="purpose" [(ngModel)]="contactMechanismPurpose.purposeId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="purposeTypeOption.idPurposeType" *ngFor="let purposeTypeOption of purposetypes; trackBy: trackPurposeTypeById">{{purposeTypeOption.description}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.contactMechanismPurpose.party" for="field_party">Party</label>
+            <select class="form-control" id="field_party" name="party" [(ngModel)]="contactMechanismPurpose.partyId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="partyOption.idParty" *ngFor="let partyOption of parties; trackBy: trackPartyById">{{partyOption.name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.contactMechanismPurpose.contact" for="field_contact">Contact</label>
+            <select class="form-control" id="field_contact" name="contact" [(ngModel)]="contactMechanismPurpose.contactId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="contactMechanismOption.idContact" *ngFor="let contactMechanismOption of contactmechanisms; trackBy: trackContactMechanismById">{{contactMechanismOption.description}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,31 @@
+{
+    "kampusApp": {
+        "studentCourseScore" : {
+            "home": {
+                "title": "Student Course Scores",
+                "createLabel": "Create a new Student Course Score",
+                "createOrEditLabel": "Create or edit a Student Course Score",
+                "search": "Search for Student Course Score"
+            },
+            "created": "A new Student Course Score is created with identifier {{ param }}",
+            "updated": "A Student Course Score is updated with identifier {{ param }}",
+            "deleted": "A Student Course Score is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Student Course Score {{ id }}?"
+            },
+            "detail": {
+                "title": "Student Course Score"
+            },
+            "credit": "Credit",
+            "value": "Value",
+            "valueString": "Value String",
+            "status": "Status",
+            "period": "Period",
+            "course": "Course",
+            "student": "Student",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

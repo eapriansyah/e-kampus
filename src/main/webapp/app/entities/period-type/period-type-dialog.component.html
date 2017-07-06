@@ -1,0 +1,68 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h6 class="modal-title" id="myPeriodTypeLabel" jhiTranslate="kampusApp.periodType.home.createOrEditLabel">Create or edit a Period Type</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!periodType.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="periodType.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.periodType.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                [(ngModel)]="periodType.description"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.periodType.fromDay" for="field_fromDay">From Day</label>
+            <input type="number" class="form-control" name="fromDay" id="field_fromDay"
+                [(ngModel)]="periodType.fromDay"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.periodType.fromMonth" for="field_fromMonth">From Month</label>
+            <input type="number" class="form-control" name="fromMonth" id="field_fromMonth"
+                [(ngModel)]="periodType.fromMonth"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.periodType.thruDay" for="field_thruDay">Thru Day</label>
+            <input type="number" class="form-control" name="thruDay" id="field_thruDay"
+                [(ngModel)]="periodType.thruDay"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.periodType.thruMonth" for="field_thruMonth">Thru Month</label>
+            <input type="number" class="form-control" name="thruMonth" id="field_thruMonth"
+                [(ngModel)]="periodType.thruMonth"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.periodType.fromAddYear" for="field_fromAddYear">From Add Year</label>
+            <input type="number" class="form-control" name="fromAddYear" id="field_fromAddYear"
+                [(ngModel)]="periodType.fromAddYear"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.periodType.thruAddYear" for="field_thruAddYear">Thru Add Year</label>
+            <input type="number" class="form-control" name="thruAddYear" id="field_thruAddYear"
+                [(ngModel)]="periodType.thruAddYear"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.periodType.sequence" for="field_sequence">Sequence</label>
+            <input type="number" class="form-control" name="sequence" id="field_sequence"
+                [(ngModel)]="periodType.sequence"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.periodType.idParent" for="field_idParent">Id Parent</label>
+            <input type="number" class="form-control" name="idParent" id="field_idParent"
+                [(ngModel)]="periodType.idParent"  />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

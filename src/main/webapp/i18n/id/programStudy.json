@@ -1,0 +1,29 @@
+{
+    "kampusApp": {
+        "programStudy" : {
+            "home": {
+                "title": "Program Studies",
+                "createLabel": "Buat Program Study",
+                "createOrEditLabel": "Rubah/Isi Program Study",
+                "search": "Cari data Program Study"
+            },
+            "created": "Program Study yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Program Study dengan identifier {{ param }} di rubah",
+            "deleted": "Program Study dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Program Study {{ id }}?"
+            },
+            "detail": {
+                "title": "Program Study"
+            },
+            "idInternal": "Id Internal",
+            "name": "Name",
+            "status": "Status",
+            "degree": "Degree",
+            "faculty": "Faculty",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

@@ -1,0 +1,159 @@
+<div style="margin-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <h5>
+                <span jhiTranslate="kampusApp.personalData.home.title">personalData</span>
+            </h5>
+            <p-dataTable
+                [value]="personalData"
+                [editable]="true"
+                [rows]="itemsPerPage"
+                [paginator]="true"
+                [pageLinks]="5"
+                [rowsPerPageOptions]="[10,15,20]"
+                [totalRecords]="totalItems"
+                [responsive]="true"
+                [lazy]="true"
+                [dataKey]="idPersonalData"
+                (onLazyLoad)="loadDataLazy($event)"
+                (onEditComplete)="updateRowData($event)">
+                <p-header>
+                    <jhi-alert></jhi-alert>
+                    <div class="col-md-1 offset-md-11">
+                        <button pButton type="button"
+                            icon="fa-plus"
+                            class="ui-button-primary btn-sm"
+                            [routerLink]="['/', { outlets: { popup: ['personal-data-new'] } }]">
+                        </button>
+                    </div>
+                    <div>
+                        <form name="searchForm" class="form-inline">
+                            <div class="input-group w-100 mt-3">
+                                <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch"
+                                      name="currentSearch" placeholder="{{ 'kampusApp.personalData.home.search' | translate }}">
+                                <button class="input-group-addon btn btn-info" (click)="search(currentSearch)" *ngIf="currentSearch">
+                                    <span class="fa fa-search"></span>
+                                </button>
+                                <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                                    <span class="fa fa-trash-o"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </p-header>
+                <p-column header="{{'kampusApp.personalData.labelSequence'|translate}}" [style]="{'width': '70px', 'text-align': 'center'}">
+                    <ng-template let-rowIndex="rowIndex" pTemplate="body">
+                        {{rowIndex + 1}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.nisn'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.nisn}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.motherName'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.motherName}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.fatherName'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.fatherName}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.fatherDob'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.fatherDob | date:'mediumDate'}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.motherDob'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.motherDob | date:'mediumDate'}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.hasPaud'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.hasPaud}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.hasTk'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.hasTk}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.person'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.personId">
+                            <a [routerLink]="['../person', rowData.personId  ]" >{{rowData.personFirstName}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.motherReligion'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.motherReligionId">
+                            <a [routerLink]="['../religion-type', rowData.motherReligionId  ]" >{{rowData.motherReligionDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.fatherReligion'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.fatherReligionId">
+                            <a [routerLink]="['../religion-type', rowData.fatherReligionId  ]" >{{rowData.fatherReligionDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.fatherEducation'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.fatherEducationId">
+                            <a [routerLink]="['../education-type', rowData.fatherEducationId  ]" >{{rowData.fatherEducationDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.motherEducation'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.motherEducationId">
+                            <a [routerLink]="['../education-type', rowData.motherEducationId  ]" >{{rowData.motherEducationDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.fatherWorkType'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.fatherWorkTypeId">
+                            <a [routerLink]="['../work-type', rowData.fatherWorkTypeId  ]" >{{rowData.fatherWorkTypeDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.motherWorkType'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.motherWorkTypeId">
+                            <a [routerLink]="['../work-type', rowData.motherWorkTypeId  ]" >{{rowData.motherWorkTypeDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.personalData.labelAction'|translate}}" [style]="{'width': '150px', 'text-align': 'center'}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <button pButton type="submit"
+                                [routerLink]="['../personal-data', rowData.idPersonalData]"
+                                icon="fa-eye"
+                                class="ui-button-info"
+                                [style]="{'height':'50px'}">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'personal-data/'+ rowData.idPersonalData + '/edit'} }]"
+                                replaceUrl="true"
+                                icon="fa-pencil"
+                                class="ui-button-primary">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'personal-data/'+ rowData.idPersonalData + '/delete'} }]"
+                                replaceUrl="true"
+                                icon="fa-remove"
+                                class="ui-button-danger">
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 10px;"></div>

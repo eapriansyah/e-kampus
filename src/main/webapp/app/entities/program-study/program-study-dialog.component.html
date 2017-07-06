@@ -1,0 +1,52 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h6 class="modal-title" id="myProgramStudyLabel" jhiTranslate="kampusApp.programStudy.home.createOrEditLabel">Create or edit a Program Study</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!programStudy.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="programStudy.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.programStudy.idInternal" for="field_idInternal">Id Internal</label>
+            <input type="text" class="form-control" name="idInternal" id="field_idInternal"
+                [(ngModel)]="programStudy.idInternal"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.programStudy.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                [(ngModel)]="programStudy.name"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.programStudy.status" for="field_status">Status</label>
+            <input type="number" class="form-control" name="status" id="field_status"
+                [(ngModel)]="programStudy.status"  />
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.programStudy.degree" for="field_degree">Degree</label>
+            <select class="form-control" id="field_degree" name="degree" [(ngModel)]="programStudy.degreeId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="DegreeOption.idDegree" *ngFor="let DegreeOption of degrees; trackBy: trackDegreeById">{{DegreeOption.description}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.programStudy.faculty" for="field_faculty">Faculty</label>
+            <select class="form-control" id="field_faculty" name="faculty" [(ngModel)]="programStudy.facultyId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="FacultyOption.idPartyRole" *ngFor="let FacultyOption of faculties; trackBy: trackFacultyById">{{FacultyOption.name}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

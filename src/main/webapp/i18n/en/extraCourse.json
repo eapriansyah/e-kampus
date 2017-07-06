@@ -1,0 +1,28 @@
+{
+    "kampusApp": {
+        "extraCourse" : {
+            "home": {
+                "title": "Extra Courses",
+                "createLabel": "Create a new Extra Course",
+                "createOrEditLabel": "Create or edit a Extra Course",
+                "search": "Search for Extra Course"
+            },
+            "created": "A new Extra Course is created with identifier {{ param }}",
+            "updated": "A Extra Course is updated with identifier {{ param }}",
+            "deleted": "A Extra Course is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Extra Course {{ id }}?"
+            },
+            "detail": {
+                "title": "Extra Course"
+            },
+            "courseCode": "Course Code",
+            "description": "Description",
+            "credit": "Credit",
+            "owner": "Owner",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

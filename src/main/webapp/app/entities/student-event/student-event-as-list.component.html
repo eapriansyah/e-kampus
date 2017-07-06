@@ -1,0 +1,84 @@
+<div style="margin-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <h5>
+                <span jhiTranslate="kampusApp.studentEvent.home.title">studentEvent</span>
+            </h5>
+            <p-dataTable
+                [value]="studentEvents"
+                [editable]="true"
+                [rows]="itemsPerPage"
+                [paginator]="true"
+                [pageLinks]="5"
+                [rowsPerPageOptions]="[10,15,20]"
+                [totalRecords]="totalItems"
+                [responsive]="true"
+                [lazy]="true"
+                [dataKey]="idStudentEvent"
+                (onLazyLoad)="loadDataLazy($event)"
+                (onEditComplete)="updateRowData($event)">
+                <p-header>
+                    <jhi-alert></jhi-alert>
+                    <div class="col-md-1 offset-md-11">
+                        <button pButton type="button"
+                            icon="fa-plus"
+                            class="ui-button-primary btn-sm"
+                            [routerLink]="['/', { outlets: { popup: ['student-event-new'] } }]">
+                        </button>
+                    </div>
+                </p-header>
+                <p-column header="{{'kampusApp.studentEvent.labelSequence'|translate}}" [style]="{'width': '70px', 'text-align': 'center'}">
+                    <ng-template let-rowIndex="rowIndex" pTemplate="body">
+                        {{rowIndex + 1}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentEvent.idEvent'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.idEvent}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentEvent.description'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.description}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentEvent.registrationtype'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.registrationtype}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentEvent.actionDone'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.actionDoneId">
+                            <a [routerLink]="['../event-action', rowData.actionDoneId  ]" >{{rowData.actionDoneDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentEvent.actionFailed'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.actionFailedId">
+                            <a [routerLink]="['../event-action', rowData.actionFailedId  ]" >{{rowData.actionFailedDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentEvent.labelAction'|translate}}" [style]="{'width': '100px', 'text-align': 'center'}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'student-event/'+ rowData.idStudentEvent + '/edit'} }]"
+                                replaceUrl="true"
+                                icon="fa-pencil"
+                                class="ui-button-primary">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'student-event/'+ rowData.idStudentEvent + '/delete'} }]"
+                                replaceUrl="true"
+                                icon="fa-remove"
+                                class="ui-button-danger">
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 10px;"></div>

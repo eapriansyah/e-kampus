@@ -1,0 +1,31 @@
+{
+    "kampusApp": {
+        "studentCourseScore" : {
+            "home": {
+                "title": "Student Course Scores",
+                "createLabel": "Buat Student Course Score",
+                "createOrEditLabel": "Rubah/Isi Student Course Score",
+                "search": "Cari data Student Course Score"
+            },
+            "created": "Student Course Score yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Student Course Score dengan identifier {{ param }} di rubah",
+            "deleted": "Student Course Score dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Student Course Score {{ id }}?"
+            },
+            "detail": {
+                "title": "Student Course Score"
+            },
+            "credit": "Credit",
+            "value": "Value",
+            "valueString": "Value String",
+            "status": "Status",
+            "period": "Period",
+            "course": "Course",
+            "student": "Student",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

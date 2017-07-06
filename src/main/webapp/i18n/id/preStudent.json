@@ -1,0 +1,30 @@
+{
+    "kampusApp": {
+        "preStudent" : {
+            "home": {
+                "title": "Pre Students",
+                "createLabel": "Buat Pre Student",
+                "createOrEditLabel": "Rubah/Isi Pre Student",
+                "search": "Cari data Pre Student"
+            },
+            "created": "Pre Student yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Pre Student dengan identifier {{ param }} di rubah",
+            "deleted": "Pre Student dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Pre Student {{ id }}?"
+            },
+            "detail": {
+                "title": "Pre Student"
+            },
+            "idPreStudent": "Id Pre Student",
+            "name": "Name",
+            "yearOf": "Year Of",
+            "status": "Status",
+            "prody": "Prody",
+            "studyPath": "Study Path",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

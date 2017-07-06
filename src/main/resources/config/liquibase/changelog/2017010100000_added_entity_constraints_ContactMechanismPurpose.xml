@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity ContactMechanismPurpose.
+    -->
+    <changeSet id="2017010100000-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="idpurposetype"
+                                 baseTableName="contact_mechanism_purpose"
+                                 constraintName="fk_contact_mechanism_purpose_purpose_id"
+                                 referencedColumnNames="idpurposetype"
+                                 referencedTableName="purpose_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="idparty"
+                                 baseTableName="contact_mechanism_purpose"
+                                 constraintName="fk_contact_mechanism_purpose_party_id"
+                                 referencedColumnNames="idparty"
+                                 referencedTableName="party"/>
+
+        <addForeignKeyConstraint baseColumnNames="idcontact"
+                                 baseTableName="contact_mechanism_purpose"
+                                 constraintName="fk_contact_mechanism_purpose_contact_id"
+                                 referencedColumnNames="idcontact"
+                                 referencedTableName="contact_mechanism"/>
+
+    </changeSet>
+</databaseChangeLog>

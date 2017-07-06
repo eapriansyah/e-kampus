@@ -1,0 +1,29 @@
+{
+    "kampusApp": {
+        "internal" : {
+            "home": {
+                "title": "Internals",
+                "createLabel": "Buat Internal",
+                "createOrEditLabel": "Rubah/Isi Internal",
+                "search": "Cari data Internal"
+            },
+            "created": "Internal yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Internal dengan identifier {{ param }} di rubah",
+            "deleted": "Internal dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Internal {{ id }}?"
+            },
+            "detail": {
+                "title": "Internal"
+            },
+            "idInternal": "Id Internal",
+            "name": "Name",
+            "description": "Description",
+            "idRoleType": "Id Role Type",
+            "idStatusType": "Id Status Type",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

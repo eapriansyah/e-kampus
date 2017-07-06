@@ -1,0 +1,31 @@
+{
+    "kampusApp": {
+        "onGoingEvent" : {
+            "home": {
+                "title": "On Going Events",
+                "createLabel": "Buat On Going Event",
+                "createOrEditLabel": "Rubah/Isi On Going Event",
+                "search": "Cari data On Going Event"
+            },
+            "created": "On Going Event yang baru dibuat dengan identifier {{ param }}",
+            "updated": "On Going Event dengan identifier {{ param }} di rubah",
+            "deleted": "On Going Event dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus On Going Event {{ id }}?"
+            },
+            "detail": {
+                "title": "On Going Event"
+            },
+            "idEvent": "Id Event",
+            "description": "Description",
+            "dateFrom": "Date From",
+            "dateThru": "Date Thru",
+            "owner": "Owner",
+            "period": "Period",
+            "event": "Event",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

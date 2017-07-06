@@ -1,0 +1,29 @@
+{
+    "kampusApp": {
+        "studentEvent" : {
+            "home": {
+                "title": "Student Events",
+                "createLabel": "Create a new Student Event",
+                "createOrEditLabel": "Create or edit a Student Event",
+                "search": "Search for Student Event"
+            },
+            "created": "A new Student Event is created with identifier {{ param }}",
+            "updated": "A Student Event is updated with identifier {{ param }}",
+            "deleted": "A Student Event is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Student Event {{ id }}?"
+            },
+            "detail": {
+                "title": "Student Event"
+            },
+            "idEvent": "Id Event",
+            "description": "Description",
+            "registrationtype": "Registrationtype",
+            "actionDone": "Action Done",
+            "actionFailed": "Action Failed",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

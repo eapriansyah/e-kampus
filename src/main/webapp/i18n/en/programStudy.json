@@ -1,0 +1,29 @@
+{
+    "kampusApp": {
+        "programStudy" : {
+            "home": {
+                "title": "Program Studies",
+                "createLabel": "Create a new Program Study",
+                "createOrEditLabel": "Create or edit a Program Study",
+                "search": "Search for Program Study"
+            },
+            "created": "A new Program Study is created with identifier {{ param }}",
+            "updated": "A Program Study is updated with identifier {{ param }}",
+            "deleted": "A Program Study is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Program Study {{ id }}?"
+            },
+            "detail": {
+                "title": "Program Study"
+            },
+            "idInternal": "Id Internal",
+            "name": "Name",
+            "status": "Status",
+            "degree": "Degree",
+            "faculty": "Faculty",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

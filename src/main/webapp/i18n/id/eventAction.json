@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "eventAction" : {
+            "home": {
+                "title": "Event Actions",
+                "createLabel": "Buat Event Action",
+                "createOrEditLabel": "Rubah/Isi Event Action",
+                "search": "Cari data Event Action"
+            },
+            "created": "Event Action yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Event Action dengan identifier {{ param }} di rubah",
+            "deleted": "Event Action dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Event Action {{ id }}?"
+            },
+            "detail": {
+                "title": "Event Action"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

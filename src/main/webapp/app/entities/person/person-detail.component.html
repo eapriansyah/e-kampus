@@ -1,0 +1,45 @@
+
+<div *ngIf="person">
+    <h5><span jhiTranslate="kampusApp.person.detail.title">Person</span> {{person.idParty}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.person.firstName">First Name</span></dt>
+        <dd>
+            <span>{{person.firstName}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.person.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{person.lastName}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.person.pob">Pob</span></dt>
+        <dd>
+            <span>{{person.pob}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.person.bloodType">Blood Type</span></dt>
+        <dd>
+            <span>{{person.bloodType}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.person.gender">Gender</span></dt>
+        <dd>
+            <span>{{person.gender}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.person.dob">Dob</span></dt>
+        <dd>
+            <span>{{person.dob | date:'mediumDate'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'person/'+ person.idParty + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

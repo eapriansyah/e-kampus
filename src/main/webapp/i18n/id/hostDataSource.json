@@ -1,0 +1,39 @@
+{
+    "kampusApp": {
+        "hostDataSource" : {
+            "home": {
+                "title": "Host Data Sources",
+                "createLabel": "Buat Host Data Source",
+                "createOrEditLabel": "Rubah/Isi Host Data Source",
+                "search": "Cari data Host Data Source"
+            },
+            "created": "Host Data Source yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Host Data Source dengan identifier {{ param }} di rubah",
+            "deleted": "Host Data Source dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Host Data Source {{ id }}?"
+            },
+            "detail": {
+                "title": "Host Data Source"
+            },
+            "tabelMahasiswa": "Tabel Mahasiswa",
+            "tabelMataKuliah": "Tabel Mata Kuliah",
+            "tabelDosen": "Tabel Dosen",
+            "tabelKelas": "Tabel Kelas",
+            "tabelNilai": "Tabel Nilai",
+            "className": "Class Name",
+            "userName": "User Name",
+            "password": "Password",
+            "jdbcUrl": "Jdbc Url",
+            "connectionTimeOut": "Connection Time Out",
+            "minimumPoolSize": "Minimum Pool Size",
+            "maximumPoolSize": "Maximum Pool Size",
+            "isActive": "Is Active",
+            "prody": "Prody",
+            "studyPath": "Study Path",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

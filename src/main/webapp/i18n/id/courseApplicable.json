@@ -1,0 +1,29 @@
+{
+    "kampusApp": {
+        "courseApplicable" : {
+            "home": {
+                "title": "Course Applicables",
+                "createLabel": "Buat Course Applicable",
+                "createOrEditLabel": "Rubah/Isi Course Applicable",
+                "search": "Cari data Course Applicable"
+            },
+            "created": "Course Applicable yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Course Applicable dengan identifier {{ param }} di rubah",
+            "deleted": "Course Applicable dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Course Applicable {{ id }}?"
+            },
+            "detail": {
+                "title": "Course Applicable"
+            },
+            "dateFrom": "Date From",
+            "dateThru": "Date Thru",
+            "prody": "Prody",
+            "course": "Course",
+            "periodType": "Period Type",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

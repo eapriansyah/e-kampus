@@ -1,0 +1,32 @@
+{
+    "kampusApp": {
+        "classStudy" : {
+            "home": {
+                "title": "Class Studies",
+                "createLabel": "Create a new Class Study",
+                "createOrEditLabel": "Create or edit a Class Study",
+                "search": "Search for Class Study"
+            },
+            "created": "A new Class Study is created with identifier {{ param }}",
+            "updated": "A Class Study is updated with identifier {{ param }}",
+            "deleted": "A Class Study is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Class Study {{ id }}?"
+            },
+            "detail": {
+                "title": "Class Study"
+            },
+            "description": "Description",
+            "refkey": "Refkey",
+            "course": "Course",
+            "prody": "Prody",
+            "period": "Period",
+            "lecture": "Lecture",
+            "secondaryLecture": "Secondary Lecture",
+            "thirdLecture": "Third Lecture",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

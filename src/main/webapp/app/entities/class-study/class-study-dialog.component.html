@@ -1,0 +1,75 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h6 class="modal-title" id="myClassStudyLabel" jhiTranslate="kampusApp.classStudy.home.createOrEditLabel">Create or edit a Class Study</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!classStudy.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="classStudy.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.classStudy.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                [(ngModel)]="classStudy.description"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.classStudy.refkey" for="field_refkey">Refkey</label>
+            <input type="text" class="form-control" name="refkey" id="field_refkey"
+                [(ngModel)]="classStudy.refkey"  />
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.classStudy.course" for="field_course">Course</label>
+            <select class="form-control" id="field_course" name="course" [(ngModel)]="classStudy.courseId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="courseOption.idCourse" *ngFor="let courseOption of courses; trackBy: trackCourseById">{{courseOption.description}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.classStudy.prody" for="field_prody">Prody</label>
+            <select class="form-control" id="field_prody" name="prody" [(ngModel)]="classStudy.prodyId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="programStudyOption.idPartyRole" *ngFor="let programStudyOption of programstudies; trackBy: trackProgramStudyById">{{programStudyOption.name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.classStudy.period" for="field_period">Period</label>
+            <select class="form-control" id="field_period" name="period" [(ngModel)]="classStudy.periodId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="academicPeriodsOption.idPeriod" *ngFor="let academicPeriodsOption of academicperiods; trackBy: trackAcademicPeriodsById">{{academicPeriodsOption.description}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.classStudy.lecture" for="field_lecture">Lecture</label>
+            <select class="form-control" id="field_lecture" name="lecture" [(ngModel)]="classStudy.lectureId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="lectureOption.idPartyRole" *ngFor="let lectureOption of lectures; trackBy: trackLectureById">{{lectureOption.name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.classStudy.secondaryLecture" for="field_secondaryLecture">Secondary Lecture</label>
+            <select class="form-control" id="field_secondaryLecture" name="secondaryLecture" [(ngModel)]="classStudy.secondaryLectureId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="lectureOption.idPartyRole" *ngFor="let lectureOption of lectures; trackBy: trackLectureById">{{lectureOption.name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.classStudy.thirdLecture" for="field_thirdLecture">Third Lecture</label>
+            <select class="form-control" id="field_thirdLecture" name="thirdLecture" [(ngModel)]="classStudy.thirdLectureId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="lectureOption.idPartyRole" *ngFor="let lectureOption of lectures; trackBy: trackLectureById">{{lectureOption.name}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,20 @@
+version: '2'
+services:
+    kampus-app:
+        image: kampus
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mariadb://kampus-mariadb:3306/kampus
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=kampus-elasticsearch:9300
+            - JAVA_OPTS=-Djgroups.tcp.address=NON_LOOPBACK -Djava.net.preferIPv4Stack=true
+        ports:
+            - 8080:8080
+    kampus-mariadb:
+        extends:
+            file: mariadb.yml
+            service: kampus-mariadb
+    kampus-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: kampus-elasticsearch

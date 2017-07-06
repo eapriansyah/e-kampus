@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_AcademicPeriods.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Course.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_CourseApplicable.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_CourseLecture.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_ContactMechanism.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_ClassStudy.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Degree.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_EducationType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_EventAction.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_ExtraCourse.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Faculty.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_HostDataSource.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Internal.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Lecture.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_OnGoingEvent.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Organization.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_PeriodType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Person.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_PersonalData.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_ProgramStudy.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_RegularCourse.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_ReligionType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Student.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170101000000_added_entity_PreStudent.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170101000000_added_entity_PostStudent.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_StudentCoursePeriod.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_StudentCourseScore.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_StudentEvent.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_StudentPeriodData.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_StudentPeriods.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_StudyPath.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_University.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_WorkType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_ContactMechanismPurpose.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_PostalAddress.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_ElectronicAddress.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_TelecomunicationNumber.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Building.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_ClassRoom.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Lab.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Zone.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Location.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_Party.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_PurposeType.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_AcademicPeriods.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_Course.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_CourseApplicable.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_CourseLecture.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_ClassStudy.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_ExtraCourse.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_Faculty.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_HostDataSource.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_OnGoingEvent.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_PersonalData.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_ProgramStudy.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_RegularCourse.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_Student.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170101000000_added_entity_constraints_PreStudent.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_StudentCoursePeriod.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_StudentCourseScore.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_StudentEvent.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_StudentPeriodData.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_StudentPeriods.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_ContactMechanismPurpose.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_Building.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_ClassRoom.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_Lab.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017010100000_added_entity_constraints_Zone.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

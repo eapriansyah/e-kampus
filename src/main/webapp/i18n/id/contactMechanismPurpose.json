@@ -1,0 +1,29 @@
+{
+    "kampusApp": {
+        "contactMechanismPurpose" : {
+            "home": {
+                "title": "Contact Mechanism Purposes",
+                "createLabel": "Buat Contact Mechanism Purpose",
+                "createOrEditLabel": "Rubah/Isi Contact Mechanism Purpose",
+                "search": "Cari data Contact Mechanism Purpose"
+            },
+            "created": "Contact Mechanism Purpose yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Contact Mechanism Purpose dengan identifier {{ param }} di rubah",
+            "deleted": "Contact Mechanism Purpose dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Contact Mechanism Purpose {{ id }}?"
+            },
+            "detail": {
+                "title": "Contact Mechanism Purpose"
+            },
+            "dateFrom": "Date From",
+            "dateThru": "Date Thru",
+            "purpose": "Purpose",
+            "party": "Party",
+            "contact": "Contact",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

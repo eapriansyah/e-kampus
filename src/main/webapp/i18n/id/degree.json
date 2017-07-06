@@ -1,0 +1,26 @@
+{
+    "kampusApp": {
+        "degree" : {
+            "home": {
+                "title": "Degrees",
+                "createLabel": "Buat Degree",
+                "createOrEditLabel": "Rubah/Isi Degree",
+                "search": "Cari data Degree"
+            },
+            "created": "Degree yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Degree dengan identifier {{ param }} di rubah",
+            "deleted": "Degree dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Degree {{ id }}?"
+            },
+            "detail": {
+                "title": "Degree"
+            },
+            "description": "Description",
+            "maxStudy": "Max Study",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

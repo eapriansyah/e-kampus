@@ -1,0 +1,28 @@
+{
+    "kampusApp": {
+        "extraCourse" : {
+            "home": {
+                "title": "Extra Courses",
+                "createLabel": "Buat Extra Course",
+                "createOrEditLabel": "Rubah/Isi Extra Course",
+                "search": "Cari data Extra Course"
+            },
+            "created": "Extra Course yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Extra Course dengan identifier {{ param }} di rubah",
+            "deleted": "Extra Course dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Extra Course {{ id }}?"
+            },
+            "detail": {
+                "title": "Extra Course"
+            },
+            "courseCode": "Course Code",
+            "description": "Description",
+            "credit": "Credit",
+            "owner": "Owner",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

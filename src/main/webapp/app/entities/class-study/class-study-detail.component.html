@@ -1,0 +1,65 @@
+
+<div *ngIf="classStudy">
+    <h5><span jhiTranslate="kampusApp.classStudy.detail.title">Class Study</span> {{classStudy.idClassStudy}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.classStudy.description">Description</span></dt>
+        <dd>
+            <span>{{classStudy.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.classStudy.refkey">Refkey</span></dt>
+        <dd>
+            <span>{{classStudy.refkey}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.classStudy.course">Course</span></dt>
+        <dd>
+            <div *ngIf="classStudy.courseId">
+                <a [routerLink]="['/course', classStudy.courseId]">{{classStudy.courseDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.classStudy.prody">Prody</span></dt>
+        <dd>
+            <div *ngIf="classStudy.prodyId">
+                <a [routerLink]="['/program-study', classStudy.prodyId]">{{classStudy.prodyName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.classStudy.period">Period</span></dt>
+        <dd>
+            <div *ngIf="classStudy.periodId">
+                <a [routerLink]="['/academic-periods', classStudy.periodId]">{{classStudy.periodDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.classStudy.lecture">Lecture</span></dt>
+        <dd>
+            <div *ngIf="classStudy.lectureId">
+                <a [routerLink]="['/lecture', classStudy.lectureId]">{{classStudy.lectureName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.classStudy.secondaryLecture">Secondary Lecture</span></dt>
+        <dd>
+            <div *ngIf="classStudy.secondaryLectureId">
+                <a [routerLink]="['/lecture', classStudy.secondaryLectureId]">{{classStudy.secondaryLectureName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.classStudy.thirdLecture">Third Lecture</span></dt>
+        <dd>
+            <div *ngIf="classStudy.thirdLectureId">
+                <a [routerLink]="['/lecture', classStudy.thirdLectureId]">{{classStudy.thirdLectureName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'class-study/'+ classStudy.idClassStudy + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

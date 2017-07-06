@@ -1,0 +1,41 @@
+
+<div *ngIf="courseLecture">
+    <h5><span jhiTranslate="kampusApp.courseLecture.detail.title">Course Lecture</span> {{courseLecture.idCourseLecture}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.courseLecture.dateFrom">Date From</span></dt>
+        <dd>
+            <span>{{courseLecture.dateFrom | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.courseLecture.dateThru">Date Thru</span></dt>
+        <dd>
+            <span>{{courseLecture.dateThru | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.courseLecture.lecture">Lecture</span></dt>
+        <dd>
+            <div *ngIf="courseLecture.lectureId">
+                <a [routerLink]="['/lecture', courseLecture.lectureId]">{{courseLecture.lectureName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.courseLecture.course">Course</span></dt>
+        <dd>
+            <div *ngIf="courseLecture.courseId">
+                <a [routerLink]="['/course', courseLecture.courseId]">{{courseLecture.courseDescription}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'course-lecture/'+ courseLecture.idCourseLecture + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

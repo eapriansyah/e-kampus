@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "religionType" : {
+            "home": {
+                "title": "Religion Types",
+                "createLabel": "Buat Religion Type",
+                "createOrEditLabel": "Rubah/Isi Religion Type",
+                "search": "Cari data Religion Type"
+            },
+            "created": "Religion Type yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Religion Type dengan identifier {{ param }} di rubah",
+            "deleted": "Religion Type dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Religion Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Religion Type"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

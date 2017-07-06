@@ -1,0 +1,31 @@
+{
+    "kampusApp": {
+        "onGoingEvent" : {
+            "home": {
+                "title": "On Going Events",
+                "createLabel": "Create a new On Going Event",
+                "createOrEditLabel": "Create or edit a On Going Event",
+                "search": "Search for On Going Event"
+            },
+            "created": "A new On Going Event is created with identifier {{ param }}",
+            "updated": "A On Going Event is updated with identifier {{ param }}",
+            "deleted": "A On Going Event is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete On Going Event {{ id }}?"
+            },
+            "detail": {
+                "title": "On Going Event"
+            },
+            "idEvent": "Id Event",
+            "description": "Description",
+            "dateFrom": "Date From",
+            "dateThru": "Date Thru",
+            "owner": "Owner",
+            "period": "Period",
+            "event": "Event",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "classRoom" : {
+            "home": {
+                "title": "Class Rooms",
+                "createLabel": "Buat Class Room",
+                "createOrEditLabel": "Rubah/Isi Class Room",
+                "search": "Cari data Class Room"
+            },
+            "created": "Class Room yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Class Room dengan identifier {{ param }} di rubah",
+            "deleted": "Class Room dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Class Room {{ id }}?"
+            },
+            "detail": {
+                "title": "Class Room"
+            },
+            "facilityCode": "Facility Code",
+            "description": "Description",
+            "building": "Building",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

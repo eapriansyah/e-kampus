@@ -1,0 +1,107 @@
+<div style="margin-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <h5>
+                <span jhiTranslate="kampusApp.academicPeriods.home.title">academicPeriods</span>
+            </h5>
+            <p-dataTable
+                [value]="academicPeriods"
+                [editable]="true"
+                [rows]="itemsPerPage"
+                [paginator]="true"
+                [pageLinks]="5"
+                [rowsPerPageOptions]="[10,15,20]"
+                [totalRecords]="totalItems"
+                [responsive]="true"
+                [lazy]="true"
+                [dataKey]="idPeriod"
+                (onLazyLoad)="loadDataLazy($event)"
+                (onEditComplete)="updateRowData($event)">
+                <p-header>
+                    <jhi-alert></jhi-alert>
+                    <div class="col-md-1 offset-md-11">
+                        <button pButton type="button"
+                            icon="fa-plus"
+                            class="ui-button-primary btn-sm"
+                            [routerLink]="['/', { outlets: { popup: ['academic-periods-new'] } }]">
+                        </button>
+                    </div>
+                    <div>
+                        <form name="searchForm" class="form-inline">
+                            <div class="input-group w-100 mt-3">
+                                <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch"
+                                      name="currentSearch" placeholder="{{ 'kampusApp.academicPeriods.home.search' | translate }}">
+                                <button class="input-group-addon btn btn-info" (click)="search(currentSearch)" *ngIf="currentSearch">
+                                    <span class="fa fa-search"></span>
+                                </button>
+                                <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                                    <span class="fa fa-trash-o"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </p-header>
+                <p-column header="{{'kampusApp.academicPeriods.labelSequence'|translate}}" [style]="{'width': '70px', 'text-align': 'center'}">
+                    <ng-template let-rowIndex="rowIndex" pTemplate="body">
+                        {{rowIndex + 1}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.academicPeriods.description'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.description}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.academicPeriods.year'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.year}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.academicPeriods.format1'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.format1}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.academicPeriods.dateFrom'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.dateFrom | date:'medium'}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.academicPeriods.dateThru'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.dateThru | date:'medium'}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.academicPeriods.periodType'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.periodTypeId">
+                            <a [routerLink]="['../period-type', rowData.periodTypeId  ]" >{{rowData.periodTypeDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.academicPeriods.labelAction'|translate}}" [style]="{'width': '150px', 'text-align': 'center'}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <button pButton type="submit"
+                                [routerLink]="['../academic-periods', rowData.idPeriod]"
+                                icon="fa-eye"
+                                class="ui-button-info"
+                                [style]="{'height':'50px'}">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'academic-periods/'+ rowData.idPeriod + '/edit'} }]"
+                                replaceUrl="true"
+                                icon="fa-pencil"
+                                class="ui-button-primary">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'academic-periods/'+ rowData.idPeriod + '/delete'} }]"
+                                replaceUrl="true"
+                                icon="fa-remove"
+                                class="ui-button-danger">
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 10px;"></div>

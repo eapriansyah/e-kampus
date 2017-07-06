@@ -1,0 +1,26 @@
+{
+    "kampusApp": {
+        "university" : {
+            "home": {
+                "title": "Universities",
+                "createLabel": "Buat University",
+                "createOrEditLabel": "Rubah/Isi University",
+                "search": "Cari data University"
+            },
+            "created": "University yang baru dibuat dengan identifier {{ param }}",
+            "updated": "University dengan identifier {{ param }} di rubah",
+            "deleted": "University dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus University {{ id }}?"
+            },
+            "detail": {
+                "title": "University"
+            },
+            "idInternal": "Id Internal",
+            "name": "Name",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

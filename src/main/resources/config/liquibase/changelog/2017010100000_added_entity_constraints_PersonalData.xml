@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PersonalData.
+    -->
+    <changeSet id="2017010100000-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="idparty"
+                                 baseTableName="personal_data"
+                                 constraintName="fk_personal_data_person_id"
+                                 referencedColumnNames="idparty"
+                                 referencedTableName="person"/>
+
+        <addForeignKeyConstraint baseColumnNames="idmotherreligiontype"
+                                 baseTableName="personal_data"
+                                 constraintName="fk_personal_data_mother_religion_id"
+                                 referencedColumnNames="idreligiontype"
+                                 referencedTableName="religion_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="idfatherreligiontype"
+                                 baseTableName="personal_data"
+                                 constraintName="fk_personal_data_father_religion_id"
+                                 referencedColumnNames="idreligiontype"
+                                 referencedTableName="religion_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="idfathereducationtype"
+                                 baseTableName="personal_data"
+                                 constraintName="fk_personal_data_father_education_id"
+                                 referencedColumnNames="ideducationtype"
+                                 referencedTableName="education_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="idmothereducationtype"
+                                 baseTableName="personal_data"
+                                 constraintName="fk_personal_data_mother_education_id"
+                                 referencedColumnNames="ideducationtype"
+                                 referencedTableName="education_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="idfatherworktype"
+                                 baseTableName="personal_data"
+                                 constraintName="fk_personal_data_father_work_type_id"
+                                 referencedColumnNames="idworktype"
+                                 referencedTableName="work_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="idmotherworktype"
+                                 baseTableName="personal_data"
+                                 constraintName="fk_personal_data_mother_work_type_id"
+                                 referencedColumnNames="idworktype"
+                                 referencedTableName="work_type"/>
+
+    </changeSet>
+</databaseChangeLog>

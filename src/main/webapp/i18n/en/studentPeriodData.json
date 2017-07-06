@@ -1,0 +1,32 @@
+{
+    "kampusApp": {
+        "studentPeriodData" : {
+            "home": {
+                "title": "Student Period Data",
+                "createLabel": "Create a new Student Period Data",
+                "createOrEditLabel": "Create or edit a Student Period Data",
+                "search": "Search for Student Period Data"
+            },
+            "created": "A new Student Period Data is created with identifier {{ param }}",
+            "updated": "A Student Period Data is updated with identifier {{ param }}",
+            "deleted": "A Student Period Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Student Period Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Student Period Data"
+            },
+            "seqnum": "Seqnum",
+            "credit": "Credit",
+            "totalCredit": "Total Credit",
+            "totalPoint": "Total Point",
+            "currentPoint": "Current Point",
+            "period": "Period",
+            "course": "Course",
+            "student": "Student",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

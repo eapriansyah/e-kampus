@@ -1,0 +1,26 @@
+{
+    "kampusApp": {
+        "degree" : {
+            "home": {
+                "title": "Degrees",
+                "createLabel": "Create a new Degree",
+                "createOrEditLabel": "Create or edit a Degree",
+                "search": "Search for Degree"
+            },
+            "created": "A new Degree is created with identifier {{ param }}",
+            "updated": "A Degree is updated with identifier {{ param }}",
+            "deleted": "A Degree is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Degree {{ id }}?"
+            },
+            "detail": {
+                "title": "Degree"
+            },
+            "description": "Description",
+            "maxStudy": "Max Study",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

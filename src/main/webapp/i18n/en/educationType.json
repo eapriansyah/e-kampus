@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "educationType" : {
+            "home": {
+                "title": "Education Types",
+                "createLabel": "Create a new Education Type",
+                "createOrEditLabel": "Create or edit a Education Type",
+                "search": "Search for Education Type"
+            },
+            "created": "A new Education Type is created with identifier {{ param }}",
+            "updated": "A Education Type is updated with identifier {{ param }}",
+            "deleted": "A Education Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Education Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Education Type"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

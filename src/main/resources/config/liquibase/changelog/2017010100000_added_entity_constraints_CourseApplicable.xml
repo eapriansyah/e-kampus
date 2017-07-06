@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity CourseApplicable.
+    -->
+    <changeSet id="2017010100000-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="idprody"
+                                 baseTableName="course_applicable"
+                                 constraintName="fk_course_applicable_prody_id"
+                                 referencedColumnNames="idparrol"
+                                 referencedTableName="program_study"/>
+
+        <addForeignKeyConstraint baseColumnNames="idcourse"
+                                 baseTableName="course_applicable"
+                                 constraintName="fk_course_applicable_course_id"
+                                 referencedColumnNames="idcourse"
+                                 referencedTableName="course"/>
+
+        <addForeignKeyConstraint baseColumnNames="idperiodtype"
+                                 baseTableName="course_applicable"
+                                 constraintName="fk_course_applicable_period_type_id"
+                                 referencedColumnNames="idperiodtype"
+                                 referencedTableName="period_type"/>
+
+    </changeSet>
+</databaseChangeLog>

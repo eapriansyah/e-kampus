@@ -1,0 +1,67 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h6 class="modal-title" id="myStudentPeriodsLabel" jhiTranslate="kampusApp.studentPeriods.home.createOrEditLabel">Create or edit a Student Periods</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!studentPeriods.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="studentPeriods.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.studentPeriods.seqnum" for="field_seqnum">Seqnum</label>
+            <input type="number" class="form-control" name="seqnum" id="field_seqnum"
+                [(ngModel)]="studentPeriods.seqnum"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.studentPeriods.credit" for="field_credit">Credit</label>
+            <input type="number" class="form-control" name="credit" id="field_credit"
+                [(ngModel)]="studentPeriods.credit"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.studentPeriods.totalCredit" for="field_totalCredit">Total Credit</label>
+            <input type="number" class="form-control" name="totalCredit" id="field_totalCredit"
+                [(ngModel)]="studentPeriods.totalCredit"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.studentPeriods.totalPoint" for="field_totalPoint">Total Point</label>
+            <input type="number" class="form-control" name="totalPoint" id="field_totalPoint"
+                [(ngModel)]="studentPeriods.totalPoint"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.studentPeriods.currentPoint" for="field_currentPoint">Current Point</label>
+            <input type="number" class="form-control" name="currentPoint" id="field_currentPoint"
+                [(ngModel)]="studentPeriods.currentPoint"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.studentPeriods.status" for="field_status">Status</label>
+            <input type="number" class="form-control" name="status" id="field_status"
+                [(ngModel)]="studentPeriods.status"  />
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.studentPeriods.student" for="field_student">Student</label>
+            <select class="form-control" id="field_student" name="student" [(ngModel)]="studentPeriods.studentId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="studentOption.idPartyRole" *ngFor="let studentOption of students; trackBy: trackStudentById">{{studentOption.name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.studentPeriods.semester" for="field_semester">Semester</label>
+            <select class="form-control" id="field_semester" name="semester" [(ngModel)]="studentPeriods.semesterId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="academicPeriodsOption.idPeriod" *ngFor="let academicPeriodsOption of academicperiods; trackBy: trackAcademicPeriodsById">{{academicPeriodsOption.description}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,31 @@
+{
+    "kampusApp": {
+        "studentCoursePeriod" : {
+            "home": {
+                "title": "Student Course Periods",
+                "createLabel": "Create a new Student Course Period",
+                "createOrEditLabel": "Create or edit a Student Course Period",
+                "search": "Search for Student Course Period"
+            },
+            "created": "A new Student Course Period is created with identifier {{ param }}",
+            "updated": "A Student Course Period is updated with identifier {{ param }}",
+            "deleted": "A Student Course Period is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Student Course Period {{ id }}?"
+            },
+            "detail": {
+                "title": "Student Course Period"
+            },
+            "credit": "Credit",
+            "value": "Value",
+            "valueString": "Value String",
+            "status": "Status",
+            "period": "Period",
+            "course": "Course",
+            "student": "Student",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

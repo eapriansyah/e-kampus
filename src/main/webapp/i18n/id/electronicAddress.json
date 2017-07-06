@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "electronicAddress" : {
+            "home": {
+                "title": "Electronic Addresses",
+                "createLabel": "Buat Electronic Address",
+                "createOrEditLabel": "Rubah/Isi Electronic Address",
+                "search": "Cari data Electronic Address"
+            },
+            "created": "Electronic Address yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Electronic Address dengan identifier {{ param }} di rubah",
+            "deleted": "Electronic Address dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Electronic Address {{ id }}?"
+            },
+            "detail": {
+                "title": "Electronic Address"
+            },
+            "address": "Address",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

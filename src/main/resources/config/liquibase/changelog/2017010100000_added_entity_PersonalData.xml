@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity PersonalData.
+    -->
+    <changeSet id="2017010100000-1" author="jhipster">
+        <createTable tableName="personal_data">
+            
+            <column name="idpersonaldata" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nisn" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="mother_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="father_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="father_dob" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="mother_dob" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="has_paud" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="has_tk" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idparty" type="UUID">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idmotherreligiontype" type="Long">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idfatherreligiontype" type="Long">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idfathereducationtype" type="Long">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idmothereducationtype" type="Long">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idfatherworktype" type="Long">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idmotherworktype" type="Long">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+</databaseChangeLog>

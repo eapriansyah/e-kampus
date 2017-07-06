@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "studyPath" : {
+            "home": {
+                "title": "Study Paths",
+                "createLabel": "Create a new Study Path",
+                "createOrEditLabel": "Create or edit a Study Path",
+                "search": "Search for Study Path"
+            },
+            "created": "A new Study Path is created with identifier {{ param }}",
+            "updated": "A Study Path is updated with identifier {{ param }}",
+            "deleted": "A Study Path is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Study Path {{ id }}?"
+            },
+            "detail": {
+                "title": "Study Path"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

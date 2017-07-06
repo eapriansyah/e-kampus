@@ -1,0 +1,33 @@
+{
+    "kampusApp": {
+        "periodType" : {
+            "home": {
+                "title": "Period Types",
+                "createLabel": "Create a new Period Type",
+                "createOrEditLabel": "Create or edit a Period Type",
+                "search": "Search for Period Type"
+            },
+            "created": "A new Period Type is created with identifier {{ param }}",
+            "updated": "A Period Type is updated with identifier {{ param }}",
+            "deleted": "A Period Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Period Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Period Type"
+            },
+            "description": "Description",
+            "fromDay": "From Day",
+            "fromMonth": "From Month",
+            "thruDay": "Thru Day",
+            "thruMonth": "Thru Month",
+            "fromAddYear": "From Add Year",
+            "thruAddYear": "Thru Add Year",
+            "sequence": "Sequence",
+            "idParent": "Id Parent",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

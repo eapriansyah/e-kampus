@@ -1,0 +1,59 @@
+
+<div *ngIf="studentPeriodData">
+    <h5><span jhiTranslate="kampusApp.studentPeriodData.detail.title">Student Period Data</span> {{studentPeriodData.idStudentPeriod}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.studentPeriodData.seqnum">Seqnum</span></dt>
+        <dd>
+            <span>{{studentPeriodData.seqnum}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriodData.credit">Credit</span></dt>
+        <dd>
+            <span>{{studentPeriodData.credit}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriodData.totalCredit">Total Credit</span></dt>
+        <dd>
+            <span>{{studentPeriodData.totalCredit}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriodData.totalPoint">Total Point</span></dt>
+        <dd>
+            <span>{{studentPeriodData.totalPoint}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriodData.currentPoint">Current Point</span></dt>
+        <dd>
+            <span>{{studentPeriodData.currentPoint}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriodData.period">Period</span></dt>
+        <dd>
+            <div *ngIf="studentPeriodData.periodId">
+                <a [routerLink]="['/academic-periods', studentPeriodData.periodId]">{{studentPeriodData.periodDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriodData.course">Course</span></dt>
+        <dd>
+            <div *ngIf="studentPeriodData.courseId">
+                <a [routerLink]="['/course', studentPeriodData.courseId]">{{studentPeriodData.courseDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriodData.student">Student</span></dt>
+        <dd>
+            <div *ngIf="studentPeriodData.studentId">
+                <a [routerLink]="['/student', studentPeriodData.studentId]">{{studentPeriodData.studentName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'student-period-data/'+ studentPeriodData.idStudentPeriod + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

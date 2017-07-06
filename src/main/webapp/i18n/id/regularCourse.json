@@ -1,0 +1,28 @@
+{
+    "kampusApp": {
+        "regularCourse" : {
+            "home": {
+                "title": "Regular Courses",
+                "createLabel": "Buat Regular Course",
+                "createOrEditLabel": "Rubah/Isi Regular Course",
+                "search": "Cari data Regular Course"
+            },
+            "created": "Regular Course yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Regular Course dengan identifier {{ param }} di rubah",
+            "deleted": "Regular Course dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Regular Course {{ id }}?"
+            },
+            "detail": {
+                "title": "Regular Course"
+            },
+            "courseCode": "Course Code",
+            "description": "Description",
+            "credit": "Credit",
+            "owner": "Owner",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

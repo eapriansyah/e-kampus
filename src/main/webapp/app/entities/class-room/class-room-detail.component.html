@@ -1,0 +1,35 @@
+
+<div *ngIf="classRoom">
+    <h5><span jhiTranslate="kampusApp.classRoom.detail.title">Class Room</span> {{classRoom.idFacility}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.classRoom.facilityCode">Facility Code</span></dt>
+        <dd>
+            <span>{{classRoom.facilityCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.classRoom.description">Description</span></dt>
+        <dd>
+            <span>{{classRoom.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.classRoom.building">Building</span></dt>
+        <dd>
+            <div *ngIf="classRoom.buildingId">
+                <a [routerLink]="['/building', classRoom.buildingId]">{{classRoom.buildingDescription}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'class-room/'+ classRoom.idFacility + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

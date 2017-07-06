@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity AcademicPeriods.
+    -->
+    <changeSet id="2017010100000-1" author="jhipster">
+        <createTable tableName="academic_periods">
+            
+            <column name="idperiod" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="description" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="jhi_year" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="format_1" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="date_from" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="date_thru" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idperiodType" type="Long">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="academic_periods" columnName="date_from" columnDataType="datetime"/>
+        <dropDefaultValue tableName="academic_periods" columnName="date_thru" columnDataType="datetime"/>
+        
+    </changeSet>
+</databaseChangeLog>

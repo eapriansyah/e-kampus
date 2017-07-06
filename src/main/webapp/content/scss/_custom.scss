@@ -1,0 +1,79 @@
+// Here you can add other styles
+
+.jh-navbar {
+    position: relative;
+    flex-direction: row;
+    height: $navbar-height;
+    margin: 0;
+    //padding: 0;
+    background-color: $navbar-bg;
+    padding: .2em 1em;
+    .profile-image {
+        margin: -10px 0px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+    .dropdown-item.active, .dropdown-item.active:focus, .dropdown-item.active:hover {
+        background-color: $navbar-bg;
+        color: $navbar-active-color;
+    }
+    .dropdown-toggle::after {
+        margin-left: 0.15em;
+    }
+    ul.navbar-nav {
+        padding: 0.5em;
+        .nav-item {
+            margin-left: 1.5rem;
+        }
+    }
+    a.nav-link {
+        font-weight: 400;
+        color: $navbar-active-color;
+        text-align: right;
+    }
+    .jh-navbar-toggler {
+        color: #ccc;
+        font-size: 1.5em;
+        padding: 10px;
+        &:hover {
+            color: #fff;
+        }
+    }
+
+}
+
+.navbar-version {
+    font-size: 10px;
+    color: red;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 992px) {
+    .jh-logo-container {
+        width: 100%;
+    }
+}
+
+.navbar-title {
+    display: inline-block;
+    vertical-align: middle;
+    color: $navbar-active-color;
+}
+
+/* ==========================================================================
+Logo styles
+========================================================================== */
+.navbar-brand {
+    &.logo {
+        padding: 5px 15px;
+        .logo-img {
+            height: 45px;
+            width: 70px;
+            display: inline-block;
+            vertical-align: middle;
+            background: url("../images/logo.png") no-repeat center center;
+            background-size: contain;
+        }
+    }
+}

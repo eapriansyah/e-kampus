@@ -1,0 +1,30 @@
+{
+    "kampusApp": {
+        "preStudent" : {
+            "home": {
+                "title": "Pre Students",
+                "createLabel": "Create a new Pre Student",
+                "createOrEditLabel": "Create or edit a Pre Student",
+                "search": "Search for Pre Student"
+            },
+            "created": "A new Pre Student is created with identifier {{ param }}",
+            "updated": "A Pre Student is updated with identifier {{ param }}",
+            "deleted": "A Pre Student is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Pre Student {{ id }}?"
+            },
+            "detail": {
+                "title": "Pre Student"
+            },
+            "idPreStudent": "Id Pre Student",
+            "name": "Name",
+            "yearOf": "Year Of",
+            "status": "Status",
+            "prody": "Prody",
+            "studyPath": "Study Path",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

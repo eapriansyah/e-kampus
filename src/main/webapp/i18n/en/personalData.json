@@ -1,0 +1,38 @@
+{
+    "kampusApp": {
+        "personalData" : {
+            "home": {
+                "title": "Personal Data",
+                "createLabel": "Create a new Personal Data",
+                "createOrEditLabel": "Create or edit a Personal Data",
+                "search": "Search for Personal Data"
+            },
+            "created": "A new Personal Data is created with identifier {{ param }}",
+            "updated": "A Personal Data is updated with identifier {{ param }}",
+            "deleted": "A Personal Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Personal Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Personal Data"
+            },
+            "nisn": "Nisn",
+            "motherName": "Mother Name",
+            "fatherName": "Father Name",
+            "fatherDob": "Father Dob",
+            "motherDob": "Mother Dob",
+            "hasPaud": "Has Paud",
+            "hasTk": "Has Tk",
+            "person": "Person",
+            "motherReligion": "Mother Religion",
+            "fatherReligion": "Father Religion",
+            "fatherEducation": "Father Education",
+            "motherEducation": "Mother Education",
+            "fatherWorkType": "Father Work Type",
+            "motherWorkType": "Mother Work Type",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

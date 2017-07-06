@@ -1,0 +1,107 @@
+<div style="margin-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <h5>
+                <span jhiTranslate="kampusApp.classStudy.home.title">classStudy</span>
+            </h5>
+            <p-dataTable
+                [value]="classStudies"
+                [editable]="true"
+                [rows]="itemsPerPage"
+                [paginator]="true"
+                [pageLinks]="5"
+                [rowsPerPageOptions]="[10,15,20]"
+                [totalRecords]="totalItems"
+                [responsive]="true"
+                [lazy]="true"
+                [dataKey]="idClassStudy"
+                (onLazyLoad)="loadDataLazy($event)"
+                (onEditComplete)="updateRowData($event)">
+                <p-header>
+                    <jhi-alert></jhi-alert>
+                    <div class="col-md-1 offset-md-11">
+                        <button pButton type="button"
+                            icon="fa-plus"
+                            class="ui-button-primary btn-sm"
+                            [routerLink]="['/', { outlets: { popup: ['class-study-new'] } }]">
+                        </button>
+                    </div>
+                </p-header>
+                <p-column header="{{'kampusApp.classStudy.labelSequence'|translate}}" [style]="{'width': '70px', 'text-align': 'center'}">
+                    <ng-template let-rowIndex="rowIndex" pTemplate="body">
+                        {{rowIndex + 1}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.classStudy.description'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.description}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.classStudy.refkey'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.refkey}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.classStudy.course'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.courseId">
+                            <a [routerLink]="['../course', rowData.courseId  ]" >{{rowData.courseDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.classStudy.prody'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.prodyId">
+                            <a [routerLink]="['../program-study', rowData.prodyId  ]" >{{rowData.prodyName}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.classStudy.period'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.periodId">
+                            <a [routerLink]="['../academic-periods', rowData.periodId  ]" >{{rowData.periodDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.classStudy.lecture'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.lectureId">
+                            <a [routerLink]="['../lecture', rowData.lectureId  ]" >{{rowData.lectureName}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.classStudy.secondaryLecture'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.secondaryLectureId">
+                            <a [routerLink]="['../lecture', rowData.secondaryLectureId  ]" >{{rowData.secondaryLectureName}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.classStudy.thirdLecture'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.thirdLectureId">
+                            <a [routerLink]="['../lecture', rowData.thirdLectureId  ]" >{{rowData.thirdLectureName}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.classStudy.labelAction'|translate}}" [style]="{'width': '100px', 'text-align': 'center'}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'class-study/'+ rowData.idClassStudy + '/edit'} }]"
+                                replaceUrl="true"
+                                icon="fa-pencil"
+                                class="ui-button-primary">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'class-study/'+ rowData.idClassStudy + '/delete'} }]"
+                                replaceUrl="true"
+                                icon="fa-remove"
+                                class="ui-button-danger">
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 10px;"></div>

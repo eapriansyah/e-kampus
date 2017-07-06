@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "lab" : {
+            "home": {
+                "title": "Labs",
+                "createLabel": "Create a new Lab",
+                "createOrEditLabel": "Create or edit a Lab",
+                "search": "Search for Lab"
+            },
+            "created": "A new Lab is created with identifier {{ param }}",
+            "updated": "A Lab is updated with identifier {{ param }}",
+            "deleted": "A Lab is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Lab {{ id }}?"
+            },
+            "detail": {
+                "title": "Lab"
+            },
+            "facilityCode": "Facility Code",
+            "description": "Description",
+            "building": "Building",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

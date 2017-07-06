@@ -1,0 +1,99 @@
+<div style="margin-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <h5>
+                <span jhiTranslate="kampusApp.studentPeriods.home.title">studentPeriods</span>
+            </h5>
+            <p-dataTable
+                [value]="studentPeriods"
+                [editable]="true"
+                [rows]="itemsPerPage"
+                [paginator]="true"
+                [pageLinks]="5"
+                [rowsPerPageOptions]="[10,15,20]"
+                [totalRecords]="totalItems"
+                [responsive]="true"
+                [lazy]="true"
+                [dataKey]="idStudentPeriod"
+                (onLazyLoad)="loadDataLazy($event)"
+                (onEditComplete)="updateRowData($event)">
+                <p-header>
+                    <jhi-alert></jhi-alert>
+                    <div class="col-md-1 offset-md-11">
+                        <button pButton type="button"
+                            icon="fa-plus"
+                            class="ui-button-primary btn-sm"
+                            [routerLink]="['/', { outlets: { popup: ['student-periods-new'] } }]">
+                        </button>
+                    </div>
+                </p-header>
+                <p-column header="{{'kampusApp.studentPeriods.labelSequence'|translate}}" [style]="{'width': '70px', 'text-align': 'center'}">
+                    <ng-template let-rowIndex="rowIndex" pTemplate="body">
+                        {{rowIndex + 1}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentPeriods.seqnum'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.seqnum}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentPeriods.credit'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.credit}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentPeriods.totalCredit'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.totalCredit}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentPeriods.totalPoint'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.totalPoint}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentPeriods.currentPoint'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.currentPoint}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentPeriods.status'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.status}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentPeriods.student'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.studentId">
+                            <a [routerLink]="['../student', rowData.studentId  ]" >{{rowData.studentName}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentPeriods.semester'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.semesterId">
+                            <a [routerLink]="['../academic-periods', rowData.semesterId  ]" >{{rowData.semesterDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.studentPeriods.labelAction'|translate}}" [style]="{'width': '100px', 'text-align': 'center'}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'student-periods/'+ rowData.idStudentPeriod + '/edit'} }]"
+                                replaceUrl="true"
+                                icon="fa-pencil"
+                                class="ui-button-primary">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'student-periods/'+ rowData.idStudentPeriod + '/delete'} }]"
+                                replaceUrl="true"
+                                icon="fa-remove"
+                                class="ui-button-danger">
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 10px;"></div>

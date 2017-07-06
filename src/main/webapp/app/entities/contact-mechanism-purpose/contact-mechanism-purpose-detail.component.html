@@ -1,0 +1,47 @@
+
+<div *ngIf="contactMechanismPurpose">
+    <h5><span jhiTranslate="kampusApp.contactMechanismPurpose.detail.title">Contact Mechanism Purpose</span> {{contactMechanismPurpose.idContactMechPurpose}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.contactMechanismPurpose.dateFrom">Date From</span></dt>
+        <dd>
+            <span>{{contactMechanismPurpose.dateFrom | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.contactMechanismPurpose.dateThru">Date Thru</span></dt>
+        <dd>
+            <span>{{contactMechanismPurpose.dateThru | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.contactMechanismPurpose.purpose">Purpose</span></dt>
+        <dd>
+            <div *ngIf="contactMechanismPurpose.purposeId">
+                <a [routerLink]="['/purpose-type', contactMechanismPurpose.purposeId]">{{contactMechanismPurpose.purposeDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.contactMechanismPurpose.party">Party</span></dt>
+        <dd>
+            <div *ngIf="contactMechanismPurpose.partyId">
+                <a [routerLink]="['/party', contactMechanismPurpose.partyId]">{{contactMechanismPurpose.partyName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.contactMechanismPurpose.contact">Contact</span></dt>
+        <dd>
+            <div *ngIf="contactMechanismPurpose.contactId">
+                <a [routerLink]="['/contact-mechanism', contactMechanismPurpose.contactId]">{{contactMechanismPurpose.contactDescription}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'contact-mechanism-purpose/'+ contactMechanismPurpose.idContactMechPurpose + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

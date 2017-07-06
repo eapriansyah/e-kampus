@@ -1,0 +1,6 @@
+{
+    "error": {
+        "title": "Error page!",
+        "403": "Anda tidak berhak mengakses halaman ini."
+    }
+}

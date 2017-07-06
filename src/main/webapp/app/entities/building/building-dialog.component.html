@@ -1,0 +1,40 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h6 class="modal-title" id="myBuildingLabel" jhiTranslate="kampusApp.building.home.createOrEditLabel">Create or edit a Building</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!building.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="building.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.building.facilityCode" for="field_facilityCode">Facility Code</label>
+            <input type="text" class="form-control" name="facilityCode" id="field_facilityCode"
+                [(ngModel)]="building.facilityCode"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.building.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                [(ngModel)]="building.description"  />
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.building.zone" for="field_zone">Zone</label>
+            <select class="form-control" id="field_zone" name="zone" [(ngModel)]="building.zoneId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="zoneOption.idGeoBoundary" *ngFor="let zoneOption of zones; trackBy: trackZoneById">{{zoneOption.description}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

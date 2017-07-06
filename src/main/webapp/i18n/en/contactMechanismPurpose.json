@@ -1,0 +1,29 @@
+{
+    "kampusApp": {
+        "contactMechanismPurpose" : {
+            "home": {
+                "title": "Contact Mechanism Purposes",
+                "createLabel": "Create a new Contact Mechanism Purpose",
+                "createOrEditLabel": "Create or edit a Contact Mechanism Purpose",
+                "search": "Search for Contact Mechanism Purpose"
+            },
+            "created": "A new Contact Mechanism Purpose is created with identifier {{ param }}",
+            "updated": "A Contact Mechanism Purpose is updated with identifier {{ param }}",
+            "deleted": "A Contact Mechanism Purpose is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Contact Mechanism Purpose {{ id }}?"
+            },
+            "detail": {
+                "title": "Contact Mechanism Purpose"
+            },
+            "dateFrom": "Date From",
+            "dateThru": "Date Thru",
+            "purpose": "Purpose",
+            "party": "Party",
+            "contact": "Contact",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

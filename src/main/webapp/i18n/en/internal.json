@@ -1,0 +1,29 @@
+{
+    "kampusApp": {
+        "internal" : {
+            "home": {
+                "title": "Internals",
+                "createLabel": "Create a new Internal",
+                "createOrEditLabel": "Create or edit a Internal",
+                "search": "Search for Internal"
+            },
+            "created": "A new Internal is created with identifier {{ param }}",
+            "updated": "A Internal is updated with identifier {{ param }}",
+            "deleted": "A Internal is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Internal {{ id }}?"
+            },
+            "detail": {
+                "title": "Internal"
+            },
+            "idInternal": "Id Internal",
+            "name": "Name",
+            "description": "Description",
+            "idRoleType": "Id Role Type",
+            "idStatusType": "Id Status Type",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

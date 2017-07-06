@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "faculty" : {
+            "home": {
+                "title": "Faculties",
+                "createLabel": "Create a new Faculty",
+                "createOrEditLabel": "Create or edit a Faculty",
+                "search": "Search for Faculty"
+            },
+            "created": "A new Faculty is created with identifier {{ param }}",
+            "updated": "A Faculty is updated with identifier {{ param }}",
+            "deleted": "A Faculty is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Faculty {{ id }}?"
+            },
+            "detail": {
+                "title": "Faculty"
+            },
+            "idInternal": "Id Internal",
+            "name": "Name",
+            "university": "University",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

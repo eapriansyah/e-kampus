@@ -1,0 +1,86 @@
+<div style="margin-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <h5>
+                <span jhiTranslate="kampusApp.courseApplicable.home.title">courseApplicable</span>
+            </h5>
+            <p-dataTable
+                [value]="courseApplicables"
+                [editable]="true"
+                [rows]="itemsPerPage"
+                [paginator]="true"
+                [pageLinks]="5"
+                [rowsPerPageOptions]="[10,15,20]"
+                [totalRecords]="totalItems"
+                [responsive]="true"
+                [lazy]="true"
+                [dataKey]="idApplCourse"
+                (onLazyLoad)="loadDataLazy($event)"
+                (onEditComplete)="updateRowData($event)">
+                <p-header>
+                    <jhi-alert></jhi-alert>
+                    <div class="col-md-1 offset-md-11">
+                        <button pButton type="button"
+                            icon="fa-plus"
+                            class="ui-button-primary btn-sm"
+                            [routerLink]="['/', { outlets: { popup: ['course-applicable-new'] } }]">
+                        </button>
+                    </div>
+                </p-header>
+                <p-column header="{{'kampusApp.courseApplicable.labelSequence'|translate}}" [style]="{'width': '70px', 'text-align': 'center'}">
+                    <ng-template let-rowIndex="rowIndex" pTemplate="body">
+                        {{rowIndex + 1}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.courseApplicable.dateFrom'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.dateFrom | date:'medium'}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.courseApplicable.dateThru'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.dateThru | date:'medium'}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.courseApplicable.prody'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.prodyId">
+                            <a [routerLink]="['../program-study', rowData.prodyId  ]" >{{rowData.prodyName}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.courseApplicable.course'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.courseId">
+                            <a [routerLink]="['../course', rowData.courseId  ]" >{{rowData.courseDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.courseApplicable.periodType'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.periodTypeId">
+                            <a [routerLink]="['../period-type', rowData.periodTypeId  ]" >{{rowData.periodTypeDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.courseApplicable.labelAction'|translate}}" [style]="{'width': '100px', 'text-align': 'center'}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'course-applicable/'+ rowData.idApplCourse + '/edit'} }]"
+                                replaceUrl="true"
+                                icon="fa-pencil"
+                                class="ui-button-primary">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'course-applicable/'+ rowData.idApplCourse + '/delete'} }]"
+                                replaceUrl="true"
+                                icon="fa-remove"
+                                class="ui-button-danger">
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 10px;"></div>

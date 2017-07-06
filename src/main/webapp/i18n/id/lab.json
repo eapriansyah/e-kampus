@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "lab" : {
+            "home": {
+                "title": "Labs",
+                "createLabel": "Buat Lab",
+                "createOrEditLabel": "Rubah/Isi Lab",
+                "search": "Cari data Lab"
+            },
+            "created": "Lab yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Lab dengan identifier {{ param }} di rubah",
+            "deleted": "Lab dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Lab {{ id }}?"
+            },
+            "detail": {
+                "title": "Lab"
+            },
+            "facilityCode": "Facility Code",
+            "description": "Description",
+            "building": "Building",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

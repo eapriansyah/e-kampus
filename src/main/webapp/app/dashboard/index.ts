@@ -1,0 +1,11 @@
+export * from './dashboard/dashboard.component';
+export * from './dashboard/dashboard-routing.module';
+export * from './dashboard/dashboard.module';
+export * from './layouts/full-layout.component';
+export * from './shared/aside.directive';
+export * from './shared/nav-dropdown.directive';
+export * from './shared/sidebar.directive';
+// export * from './shared/breadcumb.component';
+export * from './coreui.routing';
+export * from './coreui.component';
+export * from './coreui.module';

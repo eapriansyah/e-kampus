@@ -1,0 +1,30 @@
+{
+    "kampusApp": {
+        "academicPeriods" : {
+            "home": {
+                "title": "Academic Periods",
+                "createLabel": "Create a new Academic Periods",
+                "createOrEditLabel": "Create or edit a Academic Periods",
+                "search": "Search for Academic Periods"
+            },
+            "created": "A new Academic Periods is created with identifier {{ param }}",
+            "updated": "A Academic Periods is updated with identifier {{ param }}",
+            "deleted": "A Academic Periods is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Academic Periods {{ id }}?"
+            },
+            "detail": {
+                "title": "Academic Periods"
+            },
+            "description": "Description",
+            "year": "Year",
+            "format1": "Format 1",
+            "dateFrom": "Date From",
+            "dateThru": "Date Thru",
+            "periodType": "Period Type",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

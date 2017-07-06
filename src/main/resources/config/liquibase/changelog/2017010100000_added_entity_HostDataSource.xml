@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity HostDataSource.
+    -->
+    <changeSet id="2017010100000-1" author="jhipster">
+        <createTable tableName="host_data_source">
+            
+            <column name="idhosdatsou" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="tabel_mahasiswa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tabel_mata_kuliah" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tabel_dosen" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tabel_kelas" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tabel_nilai" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="class_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="user_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="jhi_password" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="jdbc_url" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="connection_time_out" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="minimum_pool_size" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="maximum_pool_size" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="is_active" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idprodi" type="UUID">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idstupat" type="Long">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+</databaseChangeLog>

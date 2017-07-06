@@ -1,0 +1,9 @@
+{
+    "activate": {
+        "title": "Activation",
+        "messages": {
+            "success": "<strong>Akun anda sudah di aktifkan.</strong> Please ",
+            "error": "<strong>User anda tidak dapat di aktifkan.</strong> Silahkan sign up."
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "lecture" : {
+            "home": {
+                "title": "Lectures",
+                "createLabel": "Create a new Lecture",
+                "createOrEditLabel": "Create or edit a Lecture",
+                "search": "Search for Lecture"
+            },
+            "created": "A new Lecture is created with identifier {{ param }}",
+            "updated": "A Lecture is updated with identifier {{ param }}",
+            "deleted": "A Lecture is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Lecture {{ id }}?"
+            },
+            "detail": {
+                "title": "Lecture"
+            },
+            "idLecture": "Id Lecture",
+            "name": "Name",
+            "status": "Status",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

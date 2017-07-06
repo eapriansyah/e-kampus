@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "postStudent" : {
+            "home": {
+                "title": "Post Students",
+                "createLabel": "Buat Post Student",
+                "createOrEditLabel": "Rubah/Isi Post Student",
+                "search": "Cari data Post Student"
+            },
+            "created": "Post Student yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Post Student dengan identifier {{ param }} di rubah",
+            "deleted": "Post Student dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Post Student {{ id }}?"
+            },
+            "detail": {
+                "title": "Post Student"
+            },
+            "idpoststudent": "Idpoststudent",
+            "name": "Name",
+            "status": "Status",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

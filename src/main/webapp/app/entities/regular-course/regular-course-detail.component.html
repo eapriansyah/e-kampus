@@ -1,0 +1,39 @@
+
+<div *ngIf="regularCourse">
+    <h5><span jhiTranslate="kampusApp.regularCourse.detail.title">Regular Course</span> {{regularCourse.idCourse}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.regularCourse.courseCode">Course Code</span></dt>
+        <dd>
+            <span>{{regularCourse.courseCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.regularCourse.description">Description</span></dt>
+        <dd>
+            <span>{{regularCourse.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.regularCourse.credit">Credit</span></dt>
+        <dd>
+            <span>{{regularCourse.credit}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.regularCourse.owner">Owner</span></dt>
+        <dd>
+            <div *ngIf="regularCourse.ownerId">
+                <a [routerLink]="['/internal', regularCourse.ownerId]">{{regularCourse.ownerName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'regular-course/'+ regularCourse.idCourse + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

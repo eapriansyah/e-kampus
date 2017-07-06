@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "zone" : {
+            "home": {
+                "title": "Zones",
+                "createLabel": "Create a new Zone",
+                "createOrEditLabel": "Create or edit a Zone",
+                "search": "Search for Zone"
+            },
+            "created": "A new Zone is created with identifier {{ param }}",
+            "updated": "A Zone is updated with identifier {{ param }}",
+            "deleted": "A Zone is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Zone {{ id }}?"
+            },
+            "detail": {
+                "title": "Zone"
+            },
+            "geoCode": "Geo Code",
+            "description": "Description",
+            "parent": "Parent",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

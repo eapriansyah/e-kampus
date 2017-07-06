@@ -1,0 +1,33 @@
+
+<div *ngIf="postStudent">
+    <h5><span jhiTranslate="kampusApp.postStudent.detail.title">Post Student</span> {{postStudent.idPartyRole}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.postStudent.idpoststudent">Idpoststudent</span></dt>
+        <dd>
+            <span>{{postStudent.idpoststudent}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.postStudent.name">Name</span></dt>
+        <dd>
+            <span>{{postStudent.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.postStudent.status">Status</span></dt>
+        <dd>
+            <span>{{postStudent.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'post-student/'+ postStudent.idPartyRole + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

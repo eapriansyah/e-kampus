@@ -1,0 +1,28 @@
+{
+    "kampusApp": {
+        "courseLecture" : {
+            "home": {
+                "title": "Course Lectures",
+                "createLabel": "Buat Course Lecture",
+                "createOrEditLabel": "Rubah/Isi Course Lecture",
+                "search": "Cari data Course Lecture"
+            },
+            "created": "Course Lecture yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Course Lecture dengan identifier {{ param }} di rubah",
+            "deleted": "Course Lecture dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Course Lecture {{ id }}?"
+            },
+            "detail": {
+                "title": "Course Lecture"
+            },
+            "dateFrom": "Date From",
+            "dateThru": "Date Thru",
+            "lecture": "Lecture",
+            "course": "Course",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

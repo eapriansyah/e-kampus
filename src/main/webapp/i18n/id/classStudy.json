@@ -1,0 +1,32 @@
+{
+    "kampusApp": {
+        "classStudy" : {
+            "home": {
+                "title": "Class Studies",
+                "createLabel": "Buat Class Study",
+                "createOrEditLabel": "Rubah/Isi Class Study",
+                "search": "Cari data Class Study"
+            },
+            "created": "Class Study yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Class Study dengan identifier {{ param }} di rubah",
+            "deleted": "Class Study dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Class Study {{ id }}?"
+            },
+            "detail": {
+                "title": "Class Study"
+            },
+            "description": "Description",
+            "refkey": "Refkey",
+            "course": "Course",
+            "prody": "Prody",
+            "period": "Period",
+            "lecture": "Lecture",
+            "secondaryLecture": "Secondary Lecture",
+            "thirdLecture": "Third Lecture",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity ProgramStudy.
+    -->
+    <changeSet id="2017010100000-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="iddegree"
+                                 baseTableName="program_study"
+                                 constraintName="fk_program_study_degree_id"
+                                 referencedColumnNames="iddegree"
+                                 referencedTableName="degree"/>
+
+        <addForeignKeyConstraint baseColumnNames="idfaculty"
+                                 baseTableName="program_study"
+                                 constraintName="fk_program_study_faculty_id"
+                                 referencedColumnNames="idparrol"
+                                 referencedTableName="faculty"/>
+
+    </changeSet>
+</databaseChangeLog>

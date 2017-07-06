@@ -1,0 +1,29 @@
+{
+    "kampusApp": {
+        "courseApplicable" : {
+            "home": {
+                "title": "Course Applicables",
+                "createLabel": "Create a new Course Applicable",
+                "createOrEditLabel": "Create or edit a Course Applicable",
+                "search": "Search for Course Applicable"
+            },
+            "created": "A new Course Applicable is created with identifier {{ param }}",
+            "updated": "A Course Applicable is updated with identifier {{ param }}",
+            "deleted": "A Course Applicable is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Course Applicable {{ id }}?"
+            },
+            "detail": {
+                "title": "Course Applicable"
+            },
+            "dateFrom": "Date From",
+            "dateThru": "Date Thru",
+            "prody": "Prody",
+            "course": "Course",
+            "periodType": "Period Type",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

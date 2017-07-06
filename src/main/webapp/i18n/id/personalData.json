@@ -1,0 +1,38 @@
+{
+    "kampusApp": {
+        "personalData" : {
+            "home": {
+                "title": "Personal Data",
+                "createLabel": "Buat Personal Data",
+                "createOrEditLabel": "Rubah/Isi Personal Data",
+                "search": "Cari data Personal Data"
+            },
+            "created": "Personal Data yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Personal Data dengan identifier {{ param }} di rubah",
+            "deleted": "Personal Data dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Personal Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Personal Data"
+            },
+            "nisn": "Nisn",
+            "motherName": "Mother Name",
+            "fatherName": "Father Name",
+            "fatherDob": "Father Dob",
+            "motherDob": "Mother Dob",
+            "hasPaud": "Has Paud",
+            "hasTk": "Has Tk",
+            "person": "Person",
+            "motherReligion": "Mother Religion",
+            "fatherReligion": "Father Religion",
+            "fatherEducation": "Father Education",
+            "motherEducation": "Mother Education",
+            "fatherWorkType": "Father Work Type",
+            "motherWorkType": "Mother Work Type",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

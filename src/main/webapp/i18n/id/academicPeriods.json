@@ -1,0 +1,30 @@
+{
+    "kampusApp": {
+        "academicPeriods" : {
+            "home": {
+                "title": "Academic Periods",
+                "createLabel": "Buat Academic Periods",
+                "createOrEditLabel": "Rubah/Isi Academic Periods",
+                "search": "Cari data Academic Periods"
+            },
+            "created": "Academic Periods yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Academic Periods dengan identifier {{ param }} di rubah",
+            "deleted": "Academic Periods dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Academic Periods {{ id }}?"
+            },
+            "detail": {
+                "title": "Academic Periods"
+            },
+            "description": "Description",
+            "year": "Year",
+            "format1": "Format 1",
+            "dateFrom": "Date From",
+            "dateThru": "Date Thru",
+            "periodType": "Period Type",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

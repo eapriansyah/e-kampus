@@ -1,0 +1,31 @@
+{
+    "kampusApp": {
+        "studentCoursePeriod" : {
+            "home": {
+                "title": "Student Course Periods",
+                "createLabel": "Buat Student Course Period",
+                "createOrEditLabel": "Rubah/Isi Student Course Period",
+                "search": "Cari data Student Course Period"
+            },
+            "created": "Student Course Period yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Student Course Period dengan identifier {{ param }} di rubah",
+            "deleted": "Student Course Period dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Student Course Period {{ id }}?"
+            },
+            "detail": {
+                "title": "Student Course Period"
+            },
+            "credit": "Credit",
+            "value": "Value",
+            "valueString": "Value String",
+            "status": "Status",
+            "period": "Period",
+            "course": "Course",
+            "student": "Student",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

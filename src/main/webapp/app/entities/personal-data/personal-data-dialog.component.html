@@ -1,0 +1,117 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h6 class="modal-title" id="myPersonalDataLabel" jhiTranslate="kampusApp.personalData.home.createOrEditLabel">Create or edit a Personal Data</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!personalData.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="personalData.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.personalData.nisn" for="field_nisn">Nisn</label>
+            <input type="text" class="form-control" name="nisn" id="field_nisn"
+                [(ngModel)]="personalData.nisn"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.personalData.motherName" for="field_motherName">Mother Name</label>
+            <input type="text" class="form-control" name="motherName" id="field_motherName"
+                [(ngModel)]="personalData.motherName"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.personalData.fatherName" for="field_fatherName">Father Name</label>
+            <input type="text" class="form-control" name="fatherName" id="field_fatherName"
+                [(ngModel)]="personalData.fatherName"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.personalData.fatherDob" for="field_fatherDob">Father Dob</label>
+            <div class="input-group">
+                <input id="field_fatherDob" type="text" class="form-control" name="fatherDob" ngbDatepicker  #fatherDobDp="ngbDatepicker" [(ngModel)]="personalData.fatherDob"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" (click)="fatherDobDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.personalData.motherDob" for="field_motherDob">Mother Dob</label>
+            <div class="input-group">
+                <input id="field_motherDob" type="text" class="form-control" name="motherDob" ngbDatepicker  #motherDobDp="ngbDatepicker" [(ngModel)]="personalData.motherDob"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" (click)="motherDobDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.personalData.hasPaud" for="field_hasPaud">Has Paud</label>
+            <input type="number" class="form-control" name="hasPaud" id="field_hasPaud"
+                [(ngModel)]="personalData.hasPaud"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.personalData.hasTk" for="field_hasTk">Has Tk</label>
+            <input type="number" class="form-control" name="hasTk" id="field_hasTk"
+                [(ngModel)]="personalData.hasTk"  />
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.personalData.person" for="field_person">Person</label>
+            <select class="form-control" id="field_person" name="person" [(ngModel)]="personalData.personId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="personOption.idParty" *ngFor="let personOption of people; trackBy: trackPersonById">{{personOption.firstName}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.personalData.motherReligion" for="field_motherReligion">Mother Religion</label>
+            <select class="form-control" id="field_motherReligion" name="motherReligion" [(ngModel)]="personalData.motherReligionId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="religionTypeOption.idReligionType" *ngFor="let religionTypeOption of religiontypes; trackBy: trackReligionTypeById">{{religionTypeOption.description}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.personalData.fatherReligion" for="field_fatherReligion">Father Religion</label>
+            <select class="form-control" id="field_fatherReligion" name="fatherReligion" [(ngModel)]="personalData.fatherReligionId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="religionTypeOption.idReligionType" *ngFor="let religionTypeOption of religiontypes; trackBy: trackReligionTypeById">{{religionTypeOption.description}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.personalData.fatherEducation" for="field_fatherEducation">Father Education</label>
+            <select class="form-control" id="field_fatherEducation" name="fatherEducation" [(ngModel)]="personalData.fatherEducationId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="educationTypeOption.idEducationType" *ngFor="let educationTypeOption of educationtypes; trackBy: trackEducationTypeById">{{educationTypeOption.description}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.personalData.motherEducation" for="field_motherEducation">Mother Education</label>
+            <select class="form-control" id="field_motherEducation" name="motherEducation" [(ngModel)]="personalData.motherEducationId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="educationTypeOption.idEducationType" *ngFor="let educationTypeOption of educationtypes; trackBy: trackEducationTypeById">{{educationTypeOption.description}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.personalData.fatherWorkType" for="field_fatherWorkType">Father Work Type</label>
+            <select class="form-control" id="field_fatherWorkType" name="fatherWorkType" [(ngModel)]="personalData.fatherWorkTypeId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="workTypeOption.idWorkType" *ngFor="let workTypeOption of worktypes; trackBy: trackWorkTypeById">{{workTypeOption.description}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.personalData.motherWorkType" for="field_motherWorkType">Mother Work Type</label>
+            <select class="form-control" id="field_motherWorkType" name="motherWorkType" [(ngModel)]="personalData.motherWorkTypeId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="workTypeOption.idWorkType" *ngFor="let workTypeOption of worktypes; trackBy: trackWorkTypeById">{{workTypeOption.description}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

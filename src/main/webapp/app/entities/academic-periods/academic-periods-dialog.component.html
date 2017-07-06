@@ -1,0 +1,59 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h6 class="modal-title" id="myAcademicPeriodsLabel" jhiTranslate="kampusApp.academicPeriods.home.createOrEditLabel">Create or edit a Academic Periods</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!academicPeriods.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="academicPeriods.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.academicPeriods.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                [(ngModel)]="academicPeriods.description"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.academicPeriods.year" for="field_year">Year</label>
+            <input type="number" class="form-control" name="year" id="field_year"
+                [(ngModel)]="academicPeriods.year"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.academicPeriods.format1" for="field_format1">Format 1</label>
+            <input type="text" class="form-control" name="format1" id="field_format1"
+                [(ngModel)]="academicPeriods.format1"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.academicPeriods.dateFrom" for="field_dateFrom">Date From</label>
+            <div class="d-flex">
+                <input id="field_dateFrom" type="datetime-local" class="form-control" name="dateFrom" [(ngModel)]="academicPeriods.dateFrom"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.academicPeriods.dateThru" for="field_dateThru">Date Thru</label>
+            <div class="d-flex">
+                <input id="field_dateThru" type="datetime-local" class="form-control" name="dateThru" [(ngModel)]="academicPeriods.dateThru"
+                  />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.academicPeriods.periodType" for="field_periodType">Period Type</label>
+            <select class="form-control" id="field_periodType" name="periodType" [(ngModel)]="academicPeriods.periodTypeId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="periodTypeOption.idPeriodType" *ngFor="let periodTypeOption of periodtypes; trackBy: trackPeriodTypeById">{{periodTypeOption.description}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

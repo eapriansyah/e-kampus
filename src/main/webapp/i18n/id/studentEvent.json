@@ -1,0 +1,29 @@
+{
+    "kampusApp": {
+        "studentEvent" : {
+            "home": {
+                "title": "Student Events",
+                "createLabel": "Buat Student Event",
+                "createOrEditLabel": "Rubah/Isi Student Event",
+                "search": "Cari data Student Event"
+            },
+            "created": "Student Event yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Student Event dengan identifier {{ param }} di rubah",
+            "deleted": "Student Event dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Student Event {{ id }}?"
+            },
+            "detail": {
+                "title": "Student Event"
+            },
+            "idEvent": "Id Event",
+            "description": "Description",
+            "registrationtype": "Registrationtype",
+            "actionDone": "Action Done",
+            "actionFailed": "Action Failed",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

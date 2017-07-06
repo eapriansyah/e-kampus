@@ -1,0 +1,154 @@
+<div style="margin-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <h5>
+                <span jhiTranslate="kampusApp.hostDataSource.home.title">hostDataSource</span>
+            </h5>
+            <p-dataTable
+                [value]="hostDataSources"
+                [editable]="true"
+                [rows]="itemsPerPage"
+                [paginator]="true"
+                [pageLinks]="5"
+                [rowsPerPageOptions]="[10,15,20]"
+                [totalRecords]="totalItems"
+                [responsive]="true"
+                [lazy]="true"
+                [dataKey]="idHostDataSource"
+                (onLazyLoad)="loadDataLazy($event)"
+                (onEditComplete)="updateRowData($event)">
+                <p-header>
+                    <jhi-alert></jhi-alert>
+                    <div class="col-md-1 offset-md-11">
+                        <button pButton type="button"
+                            icon="fa-plus"
+                            class="ui-button-primary btn-sm"
+                            [routerLink]="['/', { outlets: { popup: ['host-data-source-new'] } }]">
+                        </button>
+                    </div>
+                    <div>
+                        <form name="searchForm" class="form-inline">
+                            <div class="input-group w-100 mt-3">
+                                <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch"
+                                      name="currentSearch" placeholder="{{ 'kampusApp.hostDataSource.home.search' | translate }}">
+                                <button class="input-group-addon btn btn-info" (click)="search(currentSearch)" *ngIf="currentSearch">
+                                    <span class="fa fa-search"></span>
+                                </button>
+                                <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                                    <span class="fa fa-trash-o"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </p-header>
+                <p-column header="{{'kampusApp.hostDataSource.labelSequence'|translate}}" [style]="{'width': '70px', 'text-align': 'center'}">
+                    <ng-template let-rowIndex="rowIndex" pTemplate="body">
+                        {{rowIndex + 1}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.tabelMahasiswa'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.tabelMahasiswa}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.tabelMataKuliah'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.tabelMataKuliah}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.tabelDosen'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.tabelDosen}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.tabelKelas'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.tabelKelas}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.tabelNilai'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.tabelNilai}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.className'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.className}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.userName'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.userName}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.password'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.password}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.jdbcUrl'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.jdbcUrl}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.connectionTimeOut'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.connectionTimeOut}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.minimumPoolSize'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.minimumPoolSize}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.maximumPoolSize'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.maximumPoolSize}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.isActive'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.isActive}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.prody'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.prodyId">
+                            <a [routerLink]="['../program-study', rowData.prodyId  ]" >{{rowData.prodyName}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.studyPath'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <div *ngIf="rowData.studyPathId">
+                            <a [routerLink]="['../study-path', rowData.studyPathId  ]" >{{rowData.studyPathDescription}}</a>
+                        </div>
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.hostDataSource.labelAction'|translate}}" [style]="{'width': '150px', 'text-align': 'center'}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <button pButton type="submit"
+                                [routerLink]="['../host-data-source', rowData.idHostDataSource]"
+                                icon="fa-eye"
+                                class="ui-button-info"
+                                [style]="{'height':'50px'}">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'host-data-source/'+ rowData.idHostDataSource + '/edit'} }]"
+                                replaceUrl="true"
+                                icon="fa-pencil"
+                                class="ui-button-primary">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'host-data-source/'+ rowData.idHostDataSource + '/delete'} }]"
+                                replaceUrl="true"
+                                icon="fa-remove"
+                                class="ui-button-danger">
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 10px;"></div>

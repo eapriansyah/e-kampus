@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "contactMechanism" : {
+            "home": {
+                "title": "Contact Mechanisms",
+                "createLabel": "Buat Contact Mechanism",
+                "createOrEditLabel": "Rubah/Isi Contact Mechanism",
+                "search": "Cari data Contact Mechanism"
+            },
+            "created": "Contact Mechanism yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Contact Mechanism dengan identifier {{ param }} di rubah",
+            "deleted": "Contact Mechanism dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Contact Mechanism {{ id }}?"
+            },
+            "detail": {
+                "title": "Contact Mechanism"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+
+<div *ngIf="lecture">
+    <h5><span jhiTranslate="kampusApp.lecture.detail.title">Lecture</span> {{lecture.idPartyRole}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.lecture.idLecture">Id Lecture</span></dt>
+        <dd>
+            <span>{{lecture.idLecture}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.lecture.name">Name</span></dt>
+        <dd>
+            <span>{{lecture.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.lecture.status">Status</span></dt>
+        <dd>
+            <span>{{lecture.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'lecture/'+ lecture.idPartyRole + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

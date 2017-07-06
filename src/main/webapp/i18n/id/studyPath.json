@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "studyPath" : {
+            "home": {
+                "title": "Study Paths",
+                "createLabel": "Buat Study Path",
+                "createOrEditLabel": "Rubah/Isi Study Path",
+                "search": "Cari data Study Path"
+            },
+            "created": "Study Path yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Study Path dengan identifier {{ param }} di rubah",
+            "deleted": "Study Path dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Study Path {{ id }}?"
+            },
+            "detail": {
+                "title": "Study Path"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

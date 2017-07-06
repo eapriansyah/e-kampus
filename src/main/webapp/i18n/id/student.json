@@ -1,0 +1,30 @@
+{
+    "kampusApp": {
+        "student" : {
+            "home": {
+                "title": "Students",
+                "createLabel": "Buat Student",
+                "createOrEditLabel": "Rubah/Isi Student",
+                "search": "Cari data Student"
+            },
+            "created": "Student yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Student dengan identifier {{ param }} di rubah",
+            "deleted": "Student dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Student {{ id }}?"
+            },
+            "detail": {
+                "title": "Student"
+            },
+            "nim": "Nim",
+            "name": "Name",
+            "classof": "Classof",
+            "status": "Status",
+            "prody": "Prody",
+            "studyPath": "Study Path",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

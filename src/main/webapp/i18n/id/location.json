@@ -1,0 +1,26 @@
+{
+    "kampusApp": {
+        "location" : {
+            "home": {
+                "title": "Locations",
+                "createLabel": "Buat Location",
+                "createOrEditLabel": "Rubah/Isi Location",
+                "search": "Cari data Location"
+            },
+            "created": "Location yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Location dengan identifier {{ param }} di rubah",
+            "deleted": "Location dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Location {{ id }}?"
+            },
+            "detail": {
+                "title": "Location"
+            },
+            "geoCode": "Geo Code",
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

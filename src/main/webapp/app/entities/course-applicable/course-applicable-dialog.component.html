@@ -1,0 +1,73 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h6 class="modal-title" id="myCourseApplicableLabel" jhiTranslate="kampusApp.courseApplicable.home.createOrEditLabel">Create or edit a Course Applicable</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!courseApplicable.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="courseApplicable.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.courseApplicable.dateFrom" for="field_dateFrom">Date From</label>
+            <div class="d-flex">
+                <input id="field_dateFrom" type="datetime-local" class="form-control" name="dateFrom" [(ngModel)]="courseApplicable.dateFrom"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.courseApplicable.dateThru" for="field_dateThru">Date Thru</label>
+            <div class="d-flex">
+                <input id="field_dateThru" type="datetime-local" class="form-control" name="dateThru" [(ngModel)]="courseApplicable.dateThru"
+                  />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.courseApplicable.prody" for="field_prody">Prody</label>
+            <select class="form-control" id="field_prody" name="prody" [(ngModel)]="courseApplicable.prodyId"  required>
+                <option [ngValue]="programStudyOption.idPartyRole" *ngFor="let programStudyOption of programstudies; trackBy: trackProgramStudyById">{{programStudyOption.name}}</option>
+            </select>
+        </div>
+        <div [hidden]="!(editForm.controls.prody?.dirty && editForm.controls.prody?.invalid)">
+            <small class="form-text text-danger"
+                [hidden]="!editForm.controls.prody?.errors?.required" jhiTranslate="entity.validation.required">
+                This field is required.
+            </small>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.courseApplicable.course" for="field_course">Course</label>
+            <select class="form-control" id="field_course" name="course" [(ngModel)]="courseApplicable.courseId"  required>
+                <option [ngValue]="courseOption.idCourse" *ngFor="let courseOption of courses; trackBy: trackCourseById">{{courseOption.description}}</option>
+            </select>
+        </div>
+        <div [hidden]="!(editForm.controls.course?.dirty && editForm.controls.course?.invalid)">
+            <small class="form-text text-danger"
+                [hidden]="!editForm.controls.course?.errors?.required" jhiTranslate="entity.validation.required">
+                This field is required.
+            </small>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.courseApplicable.periodType" for="field_periodType">Period Type</label>
+            <select class="form-control" id="field_periodType" name="periodType" [(ngModel)]="courseApplicable.periodTypeId"  required>
+                <option [ngValue]="periodTypeOption.idPeriodType" *ngFor="let periodTypeOption of periodtypes; trackBy: trackPeriodTypeById">{{periodTypeOption.description}}</option>
+            </select>
+        </div>
+        <div [hidden]="!(editForm.controls.periodType?.dirty && editForm.controls.periodType?.invalid)">
+            <small class="form-text text-danger"
+                [hidden]="!editForm.controls.periodType?.errors?.required" jhiTranslate="entity.validation.required">
+                This field is required.
+            </small>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

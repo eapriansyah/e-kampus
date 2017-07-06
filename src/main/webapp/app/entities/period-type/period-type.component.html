@@ -1,0 +1,120 @@
+<div style="margin-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <h5>
+                <span jhiTranslate="kampusApp.periodType.home.title">periodType</span>
+            </h5>
+            <p-dataTable
+                [value]="periodTypes"
+                [editable]="true"
+                [rows]="itemsPerPage"
+                [paginator]="true"
+                [pageLinks]="5"
+                [rowsPerPageOptions]="[10,15,20]"
+                [totalRecords]="totalItems"
+                [responsive]="true"
+                [lazy]="true"
+                [dataKey]="idPeriodType"
+                (onLazyLoad)="loadDataLazy($event)"
+                (onEditComplete)="updateRowData($event)">
+                <p-header>
+                    <jhi-alert></jhi-alert>
+                    <div class="col-md-1 offset-md-11">
+                        <button pButton type="button"
+                            icon="fa-plus"
+                            class="ui-button-primary btn-sm"
+                            [routerLink]="['/', { outlets: { popup: ['period-type-new'] } }]">
+                        </button>
+                    </div>
+                    <div>
+                        <form name="searchForm" class="form-inline">
+                            <div class="input-group w-100 mt-3">
+                                <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch"
+                                      name="currentSearch" placeholder="{{ 'kampusApp.periodType.home.search' | translate }}">
+                                <button class="input-group-addon btn btn-info" (click)="search(currentSearch)" *ngIf="currentSearch">
+                                    <span class="fa fa-search"></span>
+                                </button>
+                                <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                                    <span class="fa fa-trash-o"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </p-header>
+                <p-column header="{{'kampusApp.periodType.labelSequence'|translate}}" [style]="{'width': '70px', 'text-align': 'center'}">
+                    <ng-template let-rowIndex="rowIndex" pTemplate="body">
+                        {{rowIndex + 1}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.periodType.description'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.description}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.periodType.fromDay'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.fromDay}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.periodType.fromMonth'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.fromMonth}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.periodType.thruDay'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.thruDay}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.periodType.thruMonth'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.thruMonth}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.periodType.fromAddYear'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.fromAddYear}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.periodType.thruAddYear'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.thruAddYear}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.periodType.sequence'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.sequence}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.periodType.idParent'|translate}}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        {{rowData.idParent}}
+                    </ng-template>
+                </p-column>
+                <p-column header="{{'kampusApp.periodType.labelAction'|translate}}" [style]="{'width': '150px', 'text-align': 'center'}">
+                    <ng-template let-rowData="rowData" pTemplate="body">
+                        <button pButton type="submit"
+                                [routerLink]="['../period-type', rowData.idPeriodType]"
+                                icon="fa-eye"
+                                class="ui-button-info"
+                                [style]="{'height':'50px'}">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'period-type/'+ rowData.idPeriodType + '/edit'} }]"
+                                replaceUrl="true"
+                                icon="fa-pencil"
+                                class="ui-button-primary">
+                        </button>
+                        <button pButton type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'period-type/'+ rowData.idPeriodType + '/delete'} }]"
+                                replaceUrl="true"
+                                icon="fa-remove"
+                                class="ui-button-danger">
+                        </button>
+                    </ng-template>
+                </p-column>
+            </p-dataTable>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 10px;"></div>

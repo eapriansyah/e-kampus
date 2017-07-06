@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "building" : {
+            "home": {
+                "title": "Buildings",
+                "createLabel": "Buat Building",
+                "createOrEditLabel": "Rubah/Isi Building",
+                "search": "Cari data Building"
+            },
+            "created": "Building yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Building dengan identifier {{ param }} di rubah",
+            "deleted": "Building dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Building {{ id }}?"
+            },
+            "detail": {
+                "title": "Building"
+            },
+            "facilityCode": "Facility Code",
+            "description": "Description",
+            "zone": "Zone",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

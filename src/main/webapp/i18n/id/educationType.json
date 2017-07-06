@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "educationType" : {
+            "home": {
+                "title": "Education Types",
+                "createLabel": "Buat Education Type",
+                "createOrEditLabel": "Rubah/Isi Education Type",
+                "search": "Cari data Education Type"
+            },
+            "created": "Education Type yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Education Type dengan identifier {{ param }} di rubah",
+            "deleted": "Education Type dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Education Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Education Type"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

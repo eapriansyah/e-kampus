@@ -1,0 +1,28 @@
+{
+    "kampusApp": {
+        "regularCourse" : {
+            "home": {
+                "title": "Regular Courses",
+                "createLabel": "Create a new Regular Course",
+                "createOrEditLabel": "Create or edit a Regular Course",
+                "search": "Search for Regular Course"
+            },
+            "created": "A new Regular Course is created with identifier {{ param }}",
+            "updated": "A Regular Course is updated with identifier {{ param }}",
+            "deleted": "A Regular Course is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Regular Course {{ id }}?"
+            },
+            "detail": {
+                "title": "Regular Course"
+            },
+            "courseCode": "Course Code",
+            "description": "Description",
+            "credit": "Credit",
+            "owner": "Owner",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

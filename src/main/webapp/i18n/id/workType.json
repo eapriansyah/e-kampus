@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "workType" : {
+            "home": {
+                "title": "Work Types",
+                "createLabel": "Buat Work Type",
+                "createOrEditLabel": "Rubah/Isi Work Type",
+                "search": "Cari data Work Type"
+            },
+            "created": "Work Type yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Work Type dengan identifier {{ param }} di rubah",
+            "deleted": "Work Type dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Work Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Work Type"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

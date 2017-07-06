@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "eventAction" : {
+            "home": {
+                "title": "Event Actions",
+                "createLabel": "Create a new Event Action",
+                "createOrEditLabel": "Create or edit a Event Action",
+                "search": "Search for Event Action"
+            },
+            "created": "A new Event Action is created with identifier {{ param }}",
+            "updated": "A Event Action is updated with identifier {{ param }}",
+            "deleted": "A Event Action is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Event Action {{ id }}?"
+            },
+            "detail": {
+                "title": "Event Action"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

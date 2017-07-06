@@ -1,0 +1,35 @@
+
+<div *ngIf="zone">
+    <h5><span jhiTranslate="kampusApp.zone.detail.title">Zone</span> {{zone.idGeoBoundary}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.zone.geoCode">Geo Code</span></dt>
+        <dd>
+            <span>{{zone.geoCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.zone.description">Description</span></dt>
+        <dd>
+            <span>{{zone.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.zone.parent">Parent</span></dt>
+        <dd>
+            <div *ngIf="zone.parentId">
+                <a [routerLink]="['/location', zone.parentId]">{{zone.parentDescription}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'zone/'+ zone.idGeoBoundary + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

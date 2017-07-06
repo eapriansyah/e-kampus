@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "purposeType" : {
+            "home": {
+                "title": "Purpose Types",
+                "createLabel": "Create a new Purpose Type",
+                "createOrEditLabel": "Create or edit a Purpose Type",
+                "search": "Search for Purpose Type"
+            },
+            "created": "A new Purpose Type is created with identifier {{ param }}",
+            "updated": "A Purpose Type is updated with identifier {{ param }}",
+            "deleted": "A Purpose Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Purpose Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Purpose Type"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

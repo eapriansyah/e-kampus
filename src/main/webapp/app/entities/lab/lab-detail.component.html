@@ -1,0 +1,35 @@
+
+<div *ngIf="lab">
+    <h5><span jhiTranslate="kampusApp.lab.detail.title">Lab</span> {{lab.idFacility}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.lab.facilityCode">Facility Code</span></dt>
+        <dd>
+            <span>{{lab.facilityCode}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.lab.description">Description</span></dt>
+        <dd>
+            <span>{{lab.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.lab.building">Building</span></dt>
+        <dd>
+            <div *ngIf="lab.buildingId">
+                <a [routerLink]="['/building', lab.buildingId]">{{lab.buildingDescription}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'lab/'+ lab.idFacility + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

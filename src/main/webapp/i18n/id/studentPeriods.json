@@ -1,0 +1,32 @@
+{
+    "kampusApp": {
+        "studentPeriods" : {
+            "home": {
+                "title": "Student Periods",
+                "createLabel": "Buat Student Periods",
+                "createOrEditLabel": "Rubah/Isi Student Periods",
+                "search": "Cari data Student Periods"
+            },
+            "created": "Student Periods yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Student Periods dengan identifier {{ param }} di rubah",
+            "deleted": "Student Periods dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Student Periods {{ id }}?"
+            },
+            "detail": {
+                "title": "Student Periods"
+            },
+            "seqnum": "Seqnum",
+            "credit": "Credit",
+            "totalCredit": "Total Credit",
+            "totalPoint": "Total Point",
+            "currentPoint": "Current Point",
+            "status": "Status",
+            "student": "Student",
+            "semester": "Semester",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

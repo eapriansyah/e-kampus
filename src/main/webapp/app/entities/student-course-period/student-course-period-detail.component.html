@@ -1,0 +1,55 @@
+
+<div *ngIf="studentCoursePeriod">
+    <h5><span jhiTranslate="kampusApp.studentCoursePeriod.detail.title">Student Course Period</span> {{studentCoursePeriod.idStudentCoursePeriod}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.studentCoursePeriod.credit">Credit</span></dt>
+        <dd>
+            <span>{{studentCoursePeriod.credit}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCoursePeriod.value">Value</span></dt>
+        <dd>
+            <span>{{studentCoursePeriod.value}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCoursePeriod.valueString">Value String</span></dt>
+        <dd>
+            <span>{{studentCoursePeriod.valueString}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCoursePeriod.status">Status</span></dt>
+        <dd>
+            <span>{{studentCoursePeriod.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCoursePeriod.period">Period</span></dt>
+        <dd>
+            <div *ngIf="studentCoursePeriod.periodId">
+                <a [routerLink]="['/academic-periods', studentCoursePeriod.periodId]">{{studentCoursePeriod.periodDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCoursePeriod.course">Course</span></dt>
+        <dd>
+            <div *ngIf="studentCoursePeriod.courseId">
+                <a [routerLink]="['/course', studentCoursePeriod.courseId]">{{studentCoursePeriod.courseDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCoursePeriod.student">Student</span></dt>
+        <dd>
+            <div *ngIf="studentCoursePeriod.studentId">
+                <a [routerLink]="['/student', studentCoursePeriod.studentId]">{{studentCoursePeriod.studentName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'student-course-period/'+ studentCoursePeriod.idStudentCoursePeriod + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

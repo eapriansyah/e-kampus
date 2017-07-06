@@ -1,0 +1,49 @@
+
+<div *ngIf="preStudent">
+    <h5><span jhiTranslate="kampusApp.preStudent.detail.title">Pre Student</span> {{preStudent.idPartyRole}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.preStudent.idPreStudent">Id Pre Student</span></dt>
+        <dd>
+            <span>{{preStudent.idPreStudent}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.preStudent.name">Name</span></dt>
+        <dd>
+            <span>{{preStudent.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.preStudent.yearOf">Year Of</span></dt>
+        <dd>
+            <span>{{preStudent.yearOf}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.preStudent.status">Status</span></dt>
+        <dd>
+            <span>{{preStudent.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.preStudent.prody">Prody</span></dt>
+        <dd>
+            <div *ngIf="preStudent.prodyId">
+                <a [routerLink]="['/program-study', preStudent.prodyId]">{{preStudent.prodyName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.preStudent.studyPath">Study Path</span></dt>
+        <dd>
+            <div *ngIf="preStudent.studyPathId">
+                <a [routerLink]="['/study-path', preStudent.studyPathId]">{{preStudent.studyPathDescription}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'pre-student/'+ preStudent.idPartyRole + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

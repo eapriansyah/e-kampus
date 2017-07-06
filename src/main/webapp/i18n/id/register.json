@@ -1,0 +1,24 @@
+{
+    "register": {
+        "title": "Mendaftar",
+        "form": {
+            "button": "Daftar"
+        },
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "Nama user anda di butuhkan.",
+                    "minlength": "Nama user  minimal 1 karakter.",
+                    "maxlength": "Nama user  tidak boleh lebih dari 50 karakter.",
+                    "pattern": "Nama user hanya mengandung huruf kecil, huruf besar dan angka."
+                }
+            },
+            "success": "<strong>Pendaftaran berhasil!</strong> Periksa email anda.",
+            "error": {
+                "fail": "<strong>Pendaftaran gagal!</strong> Silahkan mencoba kembali.",
+                "userexists": "<strong>Nama user sudah terdaftar!</strong> Pilih nama lain.",
+                "emailexists": "<strong>Email sudah di pakai!</strong> Pilih email lain."
+            }
+        }
+    }
+}

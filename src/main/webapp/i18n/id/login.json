@@ -1,0 +1,19 @@
+{
+    "login": {
+        "title": "Masuk Applikasi",
+        "form": {
+            "password": "Sandi",
+            "password.placeholder": "Sandi anda",
+            "rememberme": "Ingat Saya",
+            "button": "Masuk"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>Gagal masuk applikasi!</strong> Periksa hak anda."
+            }
+        },
+        "password" : {
+            "forgot": "Anda lupa sandi?"
+        }
+    }
+}

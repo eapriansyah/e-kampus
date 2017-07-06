@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "telecomunicationNumber" : {
+            "home": {
+                "title": "Telecomunication Numbers",
+                "createLabel": "Create a new Telecomunication Number",
+                "createOrEditLabel": "Create or edit a Telecomunication Number",
+                "search": "Search for Telecomunication Number"
+            },
+            "created": "A new Telecomunication Number is created with identifier {{ param }}",
+            "updated": "A Telecomunication Number is updated with identifier {{ param }}",
+            "deleted": "A Telecomunication Number is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Telecomunication Number {{ id }}?"
+            },
+            "detail": {
+                "title": "Telecomunication Number"
+            },
+            "number": "Number",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

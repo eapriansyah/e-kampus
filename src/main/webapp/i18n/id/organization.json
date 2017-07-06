@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "organization" : {
+            "home": {
+                "title": "Organizations",
+                "createLabel": "Buat Organization",
+                "createOrEditLabel": "Rubah/Isi Organization",
+                "search": "Cari data Organization"
+            },
+            "created": "Organization yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Organization dengan identifier {{ param }} di rubah",
+            "deleted": "Organization dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Organization {{ id }}?"
+            },
+            "detail": {
+                "title": "Organization"
+            },
+            "name": "Name",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

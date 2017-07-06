@@ -1,0 +1,33 @@
+{
+    "kampusApp": {
+        "periodType" : {
+            "home": {
+                "title": "Period Types",
+                "createLabel": "Buat Period Type",
+                "createOrEditLabel": "Rubah/Isi Period Type",
+                "search": "Cari data Period Type"
+            },
+            "created": "Period Type yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Period Type dengan identifier {{ param }} di rubah",
+            "deleted": "Period Type dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Period Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Period Type"
+            },
+            "description": "Description",
+            "fromDay": "From Day",
+            "fromMonth": "From Month",
+            "thruDay": "Thru Day",
+            "thruMonth": "Thru Month",
+            "fromAddYear": "From Add Year",
+            "thruAddYear": "Thru Add Year",
+            "sequence": "Sequence",
+            "idParent": "Id Parent",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

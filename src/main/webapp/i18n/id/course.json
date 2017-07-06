@@ -1,0 +1,28 @@
+{
+    "kampusApp": {
+        "course" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "Buat Course",
+                "createOrEditLabel": "Rubah/Isi Course",
+                "search": "Cari data Course"
+            },
+            "created": "Course yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Course dengan identifier {{ param }} di rubah",
+            "deleted": "Course dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Course {{ id }}?"
+            },
+            "detail": {
+                "title": "Course"
+            },
+            "courseCode": "Course Code",
+            "description": "Description",
+            "credit": "Credit",
+            "owner": "Owner",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

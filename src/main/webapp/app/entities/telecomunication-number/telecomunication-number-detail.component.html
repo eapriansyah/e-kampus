@@ -1,0 +1,25 @@
+
+<div *ngIf="telecomunicationNumber">
+    <h5><span jhiTranslate="kampusApp.telecomunicationNumber.detail.title">Telecomunication Number</span> {{telecomunicationNumber.idContact}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.telecomunicationNumber.number">Number</span></dt>
+        <dd>
+            <span>{{telecomunicationNumber.number}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'telecomunication-number/'+ telecomunicationNumber.idContact + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

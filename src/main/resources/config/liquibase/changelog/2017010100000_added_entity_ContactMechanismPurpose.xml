@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity ContactMechanismPurpose.
+    -->
+    <changeSet id="2017010100000-1" author="jhipster">
+        <createTable tableName="contact_mechanism_purpose">
+            
+            <column name="idconmecpur" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="date_from" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="date_thru" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idpurposetype" type="Long">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idparty" type="UUID">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="idcontact" type="UUID">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="contact_mechanism_purpose" columnName="date_from" columnDataType="datetime"/>
+        <dropDefaultValue tableName="contact_mechanism_purpose" columnName="date_thru" columnDataType="datetime"/>
+        
+    </changeSet>
+</databaseChangeLog>

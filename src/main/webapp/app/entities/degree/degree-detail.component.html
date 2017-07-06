@@ -1,0 +1,29 @@
+
+<div *ngIf="degree">
+    <h5><span jhiTranslate="kampusApp.degree.detail.title">Degree</span> {{degree.idDegree}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.degree.description">Description</span></dt>
+        <dd>
+            <span>{{degree.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.degree.maxStudy">Max Study</span></dt>
+        <dd>
+            <span>{{degree.maxStudy}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'degree/'+ degree.idDegree + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

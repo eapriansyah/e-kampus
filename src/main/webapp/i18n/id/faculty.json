@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "faculty" : {
+            "home": {
+                "title": "Faculties",
+                "createLabel": "Buat Faculty",
+                "createOrEditLabel": "Rubah/Isi Faculty",
+                "search": "Cari data Faculty"
+            },
+            "created": "Faculty yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Faculty dengan identifier {{ param }} di rubah",
+            "deleted": "Faculty dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Faculty {{ id }}?"
+            },
+            "detail": {
+                "title": "Faculty"
+            },
+            "idInternal": "Id Internal",
+            "name": "Name",
+            "university": "University",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

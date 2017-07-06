@@ -1,0 +1,55 @@
+
+<div *ngIf="studentCourseScore">
+    <h5><span jhiTranslate="kampusApp.studentCourseScore.detail.title">Student Course Score</span> {{studentCourseScore.idStudentCourseScore}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.studentCourseScore.credit">Credit</span></dt>
+        <dd>
+            <span>{{studentCourseScore.credit}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCourseScore.value">Value</span></dt>
+        <dd>
+            <span>{{studentCourseScore.value}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCourseScore.valueString">Value String</span></dt>
+        <dd>
+            <span>{{studentCourseScore.valueString}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCourseScore.status">Status</span></dt>
+        <dd>
+            <span>{{studentCourseScore.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCourseScore.period">Period</span></dt>
+        <dd>
+            <div *ngIf="studentCourseScore.periodId">
+                <a [routerLink]="['/academic-periods', studentCourseScore.periodId]">{{studentCourseScore.periodDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCourseScore.course">Course</span></dt>
+        <dd>
+            <div *ngIf="studentCourseScore.courseId">
+                <a [routerLink]="['/course', studentCourseScore.courseId]">{{studentCourseScore.courseDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentCourseScore.student">Student</span></dt>
+        <dd>
+            <div *ngIf="studentCourseScore.studentId">
+                <a [routerLink]="['/student', studentCourseScore.studentId]">{{studentCourseScore.studentName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'student-course-score/'+ studentCourseScore.idStudentCourseScore + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PreStudent.
+    -->
+    <changeSet id="20170101000000-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="idprogramstudy"
+                                 baseTableName="pre_student"
+                                 constraintName="fk_pre_student_prody_id"
+                                 referencedColumnNames="idparrol"
+                                 referencedTableName="program_study"/>
+
+        <addForeignKeyConstraint baseColumnNames="idstupat"
+                                 baseTableName="pre_student"
+                                 constraintName="fk_pre_student_study_path_id"
+                                 referencedColumnNames="idstupat"
+                                 referencedTableName="study_path"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "workType" : {
+            "home": {
+                "title": "Work Types",
+                "createLabel": "Create a new Work Type",
+                "createOrEditLabel": "Create or edit a Work Type",
+                "search": "Search for Work Type"
+            },
+            "created": "A new Work Type is created with identifier {{ param }}",
+            "updated": "A Work Type is updated with identifier {{ param }}",
+            "deleted": "A Work Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Work Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Work Type"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Action",
+            "labelDataEmpty": "No Data Found"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "kampusApp": {
+        "postalAddress" : {
+            "home": {
+                "title": "Postal Addresses",
+                "createLabel": "Buat Postal Address",
+                "createOrEditLabel": "Rubah/Isi Postal Address",
+                "search": "Cari data Postal Address"
+            },
+            "created": "Postal Address yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Postal Address dengan identifier {{ param }} di rubah",
+            "deleted": "Postal Address dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Postal Address {{ id }}?"
+            },
+            "detail": {
+                "title": "Postal Address"
+            },
+            "address1": "Address 1",
+            "address2": "Address 2",
+            "city": "City",
+            "province": "Province",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

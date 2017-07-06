@@ -1,0 +1,57 @@
+
+<div *ngIf="studentPeriods">
+    <h5><span jhiTranslate="kampusApp.studentPeriods.detail.title">Student Periods</span> {{studentPeriods.idStudentPeriod}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.studentPeriods.seqnum">Seqnum</span></dt>
+        <dd>
+            <span>{{studentPeriods.seqnum}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriods.credit">Credit</span></dt>
+        <dd>
+            <span>{{studentPeriods.credit}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriods.totalCredit">Total Credit</span></dt>
+        <dd>
+            <span>{{studentPeriods.totalCredit}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriods.totalPoint">Total Point</span></dt>
+        <dd>
+            <span>{{studentPeriods.totalPoint}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriods.currentPoint">Current Point</span></dt>
+        <dd>
+            <span>{{studentPeriods.currentPoint}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriods.status">Status</span></dt>
+        <dd>
+            <span>{{studentPeriods.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriods.student">Student</span></dt>
+        <dd>
+            <div *ngIf="studentPeriods.studentId">
+                <a [routerLink]="['/student', studentPeriods.studentId]">{{studentPeriods.studentName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.studentPeriods.semester">Semester</span></dt>
+        <dd>
+            <div *ngIf="studentPeriods.semesterId">
+                <a [routerLink]="['/academic-periods', studentPeriods.semesterId]">{{studentPeriods.semesterDescription}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'student-periods/'+ studentPeriods.idStudentPeriod + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

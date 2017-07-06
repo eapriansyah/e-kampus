@@ -1,0 +1,57 @@
+
+<div *ngIf="periodType">
+    <h5><span jhiTranslate="kampusApp.periodType.detail.title">Period Type</span> {{periodType.idPeriodType}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.periodType.description">Description</span></dt>
+        <dd>
+            <span>{{periodType.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.periodType.fromDay">From Day</span></dt>
+        <dd>
+            <span>{{periodType.fromDay}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.periodType.fromMonth">From Month</span></dt>
+        <dd>
+            <span>{{periodType.fromMonth}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.periodType.thruDay">Thru Day</span></dt>
+        <dd>
+            <span>{{periodType.thruDay}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.periodType.thruMonth">Thru Month</span></dt>
+        <dd>
+            <span>{{periodType.thruMonth}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.periodType.fromAddYear">From Add Year</span></dt>
+        <dd>
+            <span>{{periodType.fromAddYear}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.periodType.thruAddYear">Thru Add Year</span></dt>
+        <dd>
+            <span>{{periodType.thruAddYear}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.periodType.sequence">Sequence</span></dt>
+        <dd>
+            <span>{{periodType.sequence}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.periodType.idParent">Id Parent</span></dt>
+        <dd>
+            <span>{{periodType.idParent}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'period-type/'+ periodType.idPeriodType + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,37 @@
+
+<div *ngIf="postalAddress">
+    <h5><span jhiTranslate="kampusApp.postalAddress.detail.title">Postal Address</span> {{postalAddress.idContact}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.postalAddress.address1">Address 1</span></dt>
+        <dd>
+            <span>{{postalAddress.address1}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.postalAddress.address2">Address 2</span></dt>
+        <dd>
+            <span>{{postalAddress.address2}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.postalAddress.city">City</span></dt>
+        <dd>
+            <span>{{postalAddress.city}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.postalAddress.province">Province</span></dt>
+        <dd>
+            <span>{{postalAddress.province}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'postal-address/'+ postalAddress.idContact + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

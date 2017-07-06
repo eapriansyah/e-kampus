@@ -1,0 +1,85 @@
+
+<div *ngIf="hostDataSource">
+    <h5><span jhiTranslate="kampusApp.hostDataSource.detail.title">Host Data Source</span> {{hostDataSource.idHostDataSource}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.hostDataSource.tabelMahasiswa">Tabel Mahasiswa</span></dt>
+        <dd>
+            <span>{{hostDataSource.tabelMahasiswa}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.tabelMataKuliah">Tabel Mata Kuliah</span></dt>
+        <dd>
+            <span>{{hostDataSource.tabelMataKuliah}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.tabelDosen">Tabel Dosen</span></dt>
+        <dd>
+            <span>{{hostDataSource.tabelDosen}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.tabelKelas">Tabel Kelas</span></dt>
+        <dd>
+            <span>{{hostDataSource.tabelKelas}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.tabelNilai">Tabel Nilai</span></dt>
+        <dd>
+            <span>{{hostDataSource.tabelNilai}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.className">Class Name</span></dt>
+        <dd>
+            <span>{{hostDataSource.className}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.userName">User Name</span></dt>
+        <dd>
+            <span>{{hostDataSource.userName}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.password">Password</span></dt>
+        <dd>
+            <span>{{hostDataSource.password}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.jdbcUrl">Jdbc Url</span></dt>
+        <dd>
+            <span>{{hostDataSource.jdbcUrl}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.connectionTimeOut">Connection Time Out</span></dt>
+        <dd>
+            <span>{{hostDataSource.connectionTimeOut}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.minimumPoolSize">Minimum Pool Size</span></dt>
+        <dd>
+            <span>{{hostDataSource.minimumPoolSize}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.maximumPoolSize">Maximum Pool Size</span></dt>
+        <dd>
+            <span>{{hostDataSource.maximumPoolSize}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.isActive">Is Active</span></dt>
+        <dd>
+            <span>{{hostDataSource.isActive}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.prody">Prody</span></dt>
+        <dd>
+            <div *ngIf="hostDataSource.prodyId">
+                <a [routerLink]="['/program-study', hostDataSource.prodyId]">{{hostDataSource.prodyName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.hostDataSource.studyPath">Study Path</span></dt>
+        <dd>
+            <div *ngIf="hostDataSource.studyPathId">
+                <a [routerLink]="['/study-path', hostDataSource.studyPathId]">{{hostDataSource.studyPathDescription}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'host-data-source/'+ hostDataSource.idHostDataSource + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

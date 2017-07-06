@@ -1,0 +1,19 @@
+{
+    "home": {
+        "title": "Selamat datang, Pengguna!",
+        "subtitle": "Ini default laman anda",
+        "logged": {
+            "message": "Anda masuk sebagai \"{{username}}\"."
+        },
+        "question": "Jika anda punya pertanyaan hubungi:",
+        "link": {
+            "homepage": "atiila",
+            "stackoverflow": "Stack Overflow",
+            "bugtracker": "atiila bug tracker",
+            "chat": "atiila public chat room",
+            "follow": "follow @atiila on Twitter"
+        },
+        "like": "Jika anda menyukai laman ini, beri bintang di kami",
+        "github": "GitHub"
+    }
+}

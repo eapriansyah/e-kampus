@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "telecomunicationNumber" : {
+            "home": {
+                "title": "Telecomunication Numbers",
+                "createLabel": "Buat Telecomunication Number",
+                "createOrEditLabel": "Rubah/Isi Telecomunication Number",
+                "search": "Cari data Telecomunication Number"
+            },
+            "created": "Telecomunication Number yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Telecomunication Number dengan identifier {{ param }} di rubah",
+            "deleted": "Telecomunication Number dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Telecomunication Number {{ id }}?"
+            },
+            "detail": {
+                "title": "Telecomunication Number"
+            },
+            "number": "Number",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

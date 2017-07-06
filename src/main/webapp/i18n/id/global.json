@@ -1,0 +1,175 @@
+{
+    "global": {
+        "title": "Kampus",
+        "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
+        "menu": {
+            "home": "Home",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities": {
+                "main": "Entities",
+                "academicPeriods": "Academic Periods",
+                "course": "Course",
+                "courseApplicable": "Course Applicable",
+                "courseLecture": "Course Lecture",
+                "contactMechanism": "Contact Mechanism",
+                "classStudy": "Class Study",
+                "degree": "Degree",
+                "educationType": "Education Type",
+                "eventAction": "Event Action",
+                "extraCourse": "Extra Course",
+                "faculty": "Faculty",
+                "hostDataSource": "Host Data Source",
+                "internal": "Internal",
+                "lecture": "Lecture",
+                "onGoingEvent": "On Going Event",
+                "organization": "Organization",
+                "periodType": "Period Type",
+                "person": "Person",
+                "personalData": "Personal Data",
+                "programStudy": "Program Study",
+                "regularCourse": "Regular Course",
+                "religionType": "Religion Type",
+                "student": "Student",
+                "preStudent": "Pre Student",
+                "postStudent": "Post Student",
+                "studentCoursePeriod": "Student Course Period",
+                "studentCourseScore": "Student Course Score",
+                "studentEvent": "Student Event",
+                "studentPeriodData": "Student Period Data",
+                "studentPeriods": "Student Periods",
+                "studyPath": "Study Path",
+                "university": "University",
+                "workType": "Work Type",
+                "contactMechanismPurpose": "Contact Mechanism Purpose",
+                "postalAddress": "Postal Address",
+                "electronicAddress": "Electronic Address",
+                "telecomunicationNumber": "Telecomunication Number",
+                "building": "Building",
+                "classRoom": "Class Room",
+                "lab": "Lab",
+                "zone": "Zone",
+                "location": "Location",
+                "party": "Party",
+                "purposeType": "Purpose Type",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "account": {
+                "main": "Akun",
+                "settings": "Pengaturan",
+                "password": "Sandi",
+                "sessions": "Sessi",
+                "login": "Masuk",
+                "logout": "Keluar",
+                "register": "Mendaftar"
+            },
+            "admin": {
+                "main": "Administration",
+                "userManagement": "Pengguna",
+                "tracker": "Lacak",
+                "metrics": "Metrics",
+                "health": "Health",
+                "configuration": "Pengaturan",
+                "logs": "Logs",
+                "audits": "Audits",
+                "apidocs": "API",
+                "database": "Database",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "Bahasa"
+        },
+        "form": {
+            "username": "Nama user",
+            "username.placeholder": "User anda",
+            "newpassword": "Sandi baru",
+            "newpassword.placeholder": "Sandi baru",
+            "confirmpassword": "Sandi baru (Konfirmasi)",
+            "confirmpassword.placeholder": "Konfirmasi sandi baru",
+            "email": "Email",
+            "email.placeholder": "Email anda"
+        },
+        "messages": {
+            "info": {
+                "authenticated": {
+                    "prefix": "Jika anda ingin ",
+                    "link": "masuk",
+                    "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
+                },
+                "register": {
+                    "noaccount": "Anda tidak punya akun?",
+                    "link": "Buat akun baru"
+                }
+            },
+            "error": {
+                "dontmatch": "Sandi dan konfirmasinya tidak sama!"
+            },
+            "validate": {
+                "newpassword": {
+                    "required": "Sandi di butuhkan.",
+                    "minlength": "Minimum password 4 karakter.",
+                    "maxlength": "Sandi tidak boleh lebih dari 50 karakter",
+                    "strength": "Kesulitan sandi:"
+                },
+                "confirmpassword": {
+                    "required": "Konfirmasi sandi di butuhkan.",
+                    "minlength": "Minimum konfirmasi sandi 4 karakter.",
+                    "maxlength": "Konfirmasi sandi tidak boleh lebih dari 50 karakter."
+                },
+                "email": {
+                    "required": "Email di butuhkan.",
+                    "invalid": "Email tidak benar.",
+                    "minlength": "Email minimum 5 karakter.",
+                    "maxlength": "Email maksimum 50 karakter."
+                }
+            }
+        },
+        "field": {
+            "id": "Id"
+        },
+        "ribbon": {
+            "dev":"Dikembangkan"
+        }
+    },
+    "entity": {
+        "action": {
+            "addblob": "Add blob",
+            "addimage": "Add image",
+            "back": "Kembali",
+            "cancel": "Batal",
+            "delete": "Hapus",
+            "edit": "Rubah",
+            "open": "Buka",
+            "save": "Simpan",
+            "view": "Lihat"
+        },
+        "detail": {
+            "field": "Field",
+            "value": "Nilai"
+        },
+        "delete": {
+            "title": "Anda yakin akan menghapus ?"
+        },
+        "validation": {
+            "required": "Field ini di butuhkan.",
+            "minlength": "Panjang field ini tidak boleh kurang dari {{ min }} karakter.",
+            "maxlength": "Panjang field ini tidak boleh melebihi {{ max }} karakter.",
+            "min": "This field should be at least {{ min }}.",
+            "max": "This field cannot be more than {{ max }}.",
+            "minbytes": "This field should be at least {{ min }} bytes.",
+            "maxbytes": "This field cannot be more than {{ max }} bytes.",
+            "pattern": "This field should follow pattern for {{ pattern }}.",
+            "number": "This field should be a number.",
+            "datetimelocal": "This field should be a date and time."
+        }
+    },
+    "error": {
+        "internalServerError": "Internal server error",
+        "server.not.reachable": "Server tidak di temukan",
+        "url.not.found": "Tidak di temukan",
+        "NotNull": "Field {{ fieldName }} tidak boleh kosong!",
+        "Size": "Field {{ fieldName }} does not meet min/max size requirements!",
+        "userexists": "Nama pengguna sudah di gunakan!",
+        "emailexists": "Email sudah di gunakan!",
+        "idexists": "Entity {{ entityName }} ini sudah ada."
+    },
+    "footer": "atiila 2017"
+}

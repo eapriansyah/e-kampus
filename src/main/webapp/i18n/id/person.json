@@ -1,0 +1,30 @@
+{
+    "kampusApp": {
+        "person" : {
+            "home": {
+                "title": "People",
+                "createLabel": "Buat Person",
+                "createOrEditLabel": "Rubah/Isi Person",
+                "search": "Cari data Person"
+            },
+            "created": "Person yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Person dengan identifier {{ param }} di rubah",
+            "deleted": "Person dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Person {{ id }}?"
+            },
+            "detail": {
+                "title": "Person"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "pob": "Pob",
+            "bloodType": "Blood Type",
+            "gender": "Gender",
+            "dob": "Dob",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

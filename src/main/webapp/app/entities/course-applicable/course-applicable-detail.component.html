@@ -1,0 +1,47 @@
+
+<div *ngIf="courseApplicable">
+    <h5><span jhiTranslate="kampusApp.courseApplicable.detail.title">Course Applicable</span> {{courseApplicable.idApplCourse}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.courseApplicable.dateFrom">Date From</span></dt>
+        <dd>
+            <span>{{courseApplicable.dateFrom | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.courseApplicable.dateThru">Date Thru</span></dt>
+        <dd>
+            <span>{{courseApplicable.dateThru | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.courseApplicable.prody">Prody</span></dt>
+        <dd>
+            <div *ngIf="courseApplicable.prodyId">
+                <a [routerLink]="['/program-study', courseApplicable.prodyId]">{{courseApplicable.prodyName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.courseApplicable.course">Course</span></dt>
+        <dd>
+            <div *ngIf="courseApplicable.courseId">
+                <a [routerLink]="['/course', courseApplicable.courseId]">{{courseApplicable.courseDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.courseApplicable.periodType">Period Type</span></dt>
+        <dd>
+            <div *ngIf="courseApplicable.periodTypeId">
+                <a [routerLink]="['/period-type', courseApplicable.periodTypeId]">{{courseApplicable.periodTypeDescription}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'course-applicable/'+ courseApplicable.idApplCourse + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

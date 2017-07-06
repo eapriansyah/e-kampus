@@ -1,0 +1,102 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h6 class="modal-title" id="myHostDataSourceLabel" jhiTranslate="kampusApp.hostDataSource.home.createOrEditLabel">Create or edit a Host Data Source</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!hostDataSource.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="hostDataSource.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.tabelMahasiswa" for="field_tabelMahasiswa">Tabel Mahasiswa</label>
+            <input type="text" class="form-control" name="tabelMahasiswa" id="field_tabelMahasiswa"
+                [(ngModel)]="hostDataSource.tabelMahasiswa"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.tabelMataKuliah" for="field_tabelMataKuliah">Tabel Mata Kuliah</label>
+            <input type="text" class="form-control" name="tabelMataKuliah" id="field_tabelMataKuliah"
+                [(ngModel)]="hostDataSource.tabelMataKuliah"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.tabelDosen" for="field_tabelDosen">Tabel Dosen</label>
+            <input type="text" class="form-control" name="tabelDosen" id="field_tabelDosen"
+                [(ngModel)]="hostDataSource.tabelDosen"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.tabelKelas" for="field_tabelKelas">Tabel Kelas</label>
+            <input type="text" class="form-control" name="tabelKelas" id="field_tabelKelas"
+                [(ngModel)]="hostDataSource.tabelKelas"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.tabelNilai" for="field_tabelNilai">Tabel Nilai</label>
+            <input type="text" class="form-control" name="tabelNilai" id="field_tabelNilai"
+                [(ngModel)]="hostDataSource.tabelNilai"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.className" for="field_className">Class Name</label>
+            <input type="text" class="form-control" name="className" id="field_className"
+                [(ngModel)]="hostDataSource.className"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.userName" for="field_userName">User Name</label>
+            <input type="text" class="form-control" name="userName" id="field_userName"
+                [(ngModel)]="hostDataSource.userName"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.password" for="field_password">Password</label>
+            <input type="text" class="form-control" name="password" id="field_password"
+                [(ngModel)]="hostDataSource.password"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.jdbcUrl" for="field_jdbcUrl">Jdbc Url</label>
+            <input type="text" class="form-control" name="jdbcUrl" id="field_jdbcUrl"
+                [(ngModel)]="hostDataSource.jdbcUrl"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.connectionTimeOut" for="field_connectionTimeOut">Connection Time Out</label>
+            <input type="number" class="form-control" name="connectionTimeOut" id="field_connectionTimeOut"
+                [(ngModel)]="hostDataSource.connectionTimeOut"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.minimumPoolSize" for="field_minimumPoolSize">Minimum Pool Size</label>
+            <input type="number" class="form-control" name="minimumPoolSize" id="field_minimumPoolSize"
+                [(ngModel)]="hostDataSource.minimumPoolSize"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.maximumPoolSize" for="field_maximumPoolSize">Maximum Pool Size</label>
+            <input type="number" class="form-control" name="maximumPoolSize" id="field_maximumPoolSize"
+                [(ngModel)]="hostDataSource.maximumPoolSize"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="kampusApp.hostDataSource.isActive" for="field_isActive">Is Active</label>
+            <input type="text" class="form-control" name="isActive" id="field_isActive"
+                [(ngModel)]="hostDataSource.isActive"  />
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.hostDataSource.prody" for="field_prody">Prody</label>
+            <select class="form-control" id="field_prody" name="prody" [(ngModel)]="hostDataSource.prodyId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="programStudyOption.idPartyRole" *ngFor="let programStudyOption of programstudies; trackBy: trackProgramStudyById">{{programStudyOption.name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="kampusApp.hostDataSource.studyPath" for="field_studyPath">Study Path</label>
+            <select class="form-control" id="field_studyPath" name="studyPath" [(ngModel)]="hostDataSource.studyPathId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="studyPathOption.idStudyPath" *ngFor="let studyPathOption of studypaths; trackBy: trackStudyPathById">{{studyPathOption.description}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

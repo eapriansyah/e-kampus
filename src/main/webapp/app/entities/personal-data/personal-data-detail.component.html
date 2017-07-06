@@ -1,0 +1,91 @@
+
+<div *ngIf="personalData">
+    <h5><span jhiTranslate="kampusApp.personalData.detail.title">Personal Data</span> {{personalData.idPersonalData}}</h5>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="kampusApp.personalData.nisn">Nisn</span></dt>
+        <dd>
+            <span>{{personalData.nisn}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.motherName">Mother Name</span></dt>
+        <dd>
+            <span>{{personalData.motherName}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.fatherName">Father Name</span></dt>
+        <dd>
+            <span>{{personalData.fatherName}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.fatherDob">Father Dob</span></dt>
+        <dd>
+            <span>{{personalData.fatherDob | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.motherDob">Mother Dob</span></dt>
+        <dd>
+            <span>{{personalData.motherDob | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.hasPaud">Has Paud</span></dt>
+        <dd>
+            <span>{{personalData.hasPaud}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.hasTk">Has Tk</span></dt>
+        <dd>
+            <span>{{personalData.hasTk}}</span>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.person">Person</span></dt>
+        <dd>
+            <div *ngIf="personalData.personId">
+                <a [routerLink]="['/person', personalData.personId]">{{personalData.personFirstName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.motherReligion">Mother Religion</span></dt>
+        <dd>
+            <div *ngIf="personalData.motherReligionId">
+                <a [routerLink]="['/religion-type', personalData.motherReligionId]">{{personalData.motherReligionDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.fatherReligion">Father Religion</span></dt>
+        <dd>
+            <div *ngIf="personalData.fatherReligionId">
+                <a [routerLink]="['/religion-type', personalData.fatherReligionId]">{{personalData.fatherReligionDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.fatherEducation">Father Education</span></dt>
+        <dd>
+            <div *ngIf="personalData.fatherEducationId">
+                <a [routerLink]="['/education-type', personalData.fatherEducationId]">{{personalData.fatherEducationDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.motherEducation">Mother Education</span></dt>
+        <dd>
+            <div *ngIf="personalData.motherEducationId">
+                <a [routerLink]="['/education-type', personalData.motherEducationId]">{{personalData.motherEducationDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.fatherWorkType">Father Work Type</span></dt>
+        <dd>
+            <div *ngIf="personalData.fatherWorkTypeId">
+                <a [routerLink]="['/work-type', personalData.fatherWorkTypeId]">{{personalData.fatherWorkTypeDescription}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="kampusApp.personalData.motherWorkType">Mother Work Type</span></dt>
+        <dd>
+            <div *ngIf="personalData.motherWorkTypeId">
+                <a [routerLink]="['/work-type', personalData.motherWorkTypeId]">{{personalData.motherWorkTypeDescription}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'personal-data/'+ personalData.idPersonalData + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,27 @@
+{
+    "kampusApp": {
+        "zone" : {
+            "home": {
+                "title": "Zones",
+                "createLabel": "Buat Zone",
+                "createOrEditLabel": "Rubah/Isi Zone",
+                "search": "Cari data Zone"
+            },
+            "created": "Zone yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Zone dengan identifier {{ param }} di rubah",
+            "deleted": "Zone dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Zone {{ id }}?"
+            },
+            "detail": {
+                "title": "Zone"
+            },
+            "geoCode": "Geo Code",
+            "description": "Description",
+            "parent": "Parent",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}

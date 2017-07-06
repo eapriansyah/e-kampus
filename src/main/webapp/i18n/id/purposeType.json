@@ -1,0 +1,25 @@
+{
+    "kampusApp": {
+        "purposeType" : {
+            "home": {
+                "title": "Purpose Types",
+                "createLabel": "Buat Purpose Type",
+                "createOrEditLabel": "Rubah/Isi Purpose Type",
+                "search": "Cari data Purpose Type"
+            },
+            "created": "Purpose Type yang baru dibuat dengan identifier {{ param }}",
+            "updated": "Purpose Type dengan identifier {{ param }} di rubah",
+            "deleted": "Purpose Type dengan identifier {{ param }} di hapus",
+            "delete": {
+                "question": "Anda yakin akan menghapus Purpose Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Purpose Type"
+            },
+            "description": "Description",
+            "labelSequence": "No",
+            "labelAction": "Aksi",
+            "labelDataEmpty": "Tidak ada data yang ditemukan"
+        }
+    }
+}
